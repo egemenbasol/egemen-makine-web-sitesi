@@ -8,12 +8,12 @@ export const company = {
   phoneHref: "tel:+905366917368",
   email: "egemenbasol@egemenmakine.com.tr",
   emailHref: "mailto:egemenbasol@egemenmakine.com.tr",
-  address: "Kemalpaşa, Sanayi Sitesi 2541 Sk No:18/A, 33460 Tarsus/Mersin",
+  address: "Veysel Karani, 1144. Sk. 58/A, 03000 Afyonkarahisar Merkez/Afyonkarahisar",
   whatsapp:
     "https://wa.me/905366917368?text=Merhaba%20Egemen%20Makine%2C%20projem%20hakkında%20bilgi%20almak%20istiyorum.",
   mapLink: "https://share.google/OXMt8SIRqn6ZnmcBJ",
   mapEmbed:
-    "https://www.google.com/maps?q=Kemalpa%C5%9Fa+Sanayi+Sitesi+2541+Sk+No18%2FA+33460+Tarsus+Mersin&output=embed",
+    "https://www.google.com/maps?q=Veysel+Karani%2C+1144.+Sk.+58%2FA%2C+03000+Afyonkarahisar+Merkez%2FAfyonkarahisar&output=embed",
 };
 
 export const navItems = [
