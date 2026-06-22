@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { company } from "@/lib/site-data";
 
 type LogoProps = {
@@ -19,6 +22,8 @@ export function Logo({
   className = "",
   onClick,
 }: LogoProps) {
+  const [logoSrc, setLogoSrc] = useState("/logo.png");
+
   const content = (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <span
@@ -26,12 +31,13 @@ export function Logo({
         style={{ width: size, height: size }}
       >
         <Image
-          src="/logo.svg"
+          src={logoSrc}
           alt={`${company.name} logo`}
           width={size - 10}
           height={size - 10}
           className="object-contain"
           priority
+          onError={() => setLogoSrc("/logo.svg")}
         />
       </span>
       {showText ? (
