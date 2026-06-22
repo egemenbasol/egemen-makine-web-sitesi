@@ -27,14 +27,14 @@ export function Logo({
   const content = (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <span
-        className="relative grid shrink-0 place-items-center overflow-hidden rounded-xl border border-sky-300/25 bg-slate-900/80"
+        className="relative grid shrink-0 place-items-center overflow-hidden rounded-xl bg-black"
         style={{ width: size, height: size }}
       >
         <Image
           src={logoSrc}
           alt={`${company.name} logo`}
-          width={size - 10}
-          height={size - 10}
+          width={size - 6}
+          height={size - 6}
           className="object-contain"
           priority
           onError={() => setLogoSrc("/logo.svg")}
