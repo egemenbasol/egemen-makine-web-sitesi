@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" aria-hidden="true">
+  <g fill="#3570E8">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M256 72 274 108 316 100 308 142 350 156 324 188 348 224 306 236 306 276 348 288 324 324 350 356 308 370 316 412 274 404 256 440 238 404 196 412 204 370 162 356 188 324 164 288 206 276 206 236 164 224 188 188 162 156 204 142 196 100 238 108 256 72Zm0 92a92 92 0 1 0 0 184 92 92 0 0 0 0-184Z"
+    />
+    <path
+      stroke="#3570E8"
+      stroke-width="18"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M214 214h44v44h44M302 214h44v44M214 302h44v44M346 258h56v44M402 302h44"
+    />
+    <circle cx="214" cy="214" r="14" />
+    <circle cx="258" cy="258" r="14" />
+    <circle cx="302" cy="214" r="14" />
+    <circle cx="346" cy="258" r="14" />
+    <circle cx="302" cy="302" r="14" />
+    <circle cx="258" cy="346" r="14" />
+    <circle cx="402" cy="302" r="14" />
+    <circle cx="346" cy="346" r="14" />
+  </g>
+</svg>

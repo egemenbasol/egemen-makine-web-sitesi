@@ -37,6 +37,10 @@ export const metadata: Metadata = {
     title: `${company.name} | Premium Endüstriyel Mühendislik`,
     description: company.description,
   },
+  icons: {
+    icon: "/logo.svg",
+    apple: "/logo.svg",
+  },
   twitter: {
     card: "summary_large_image",
     title: `${company.name} | Premium Endüstriyel Mühendislik`,

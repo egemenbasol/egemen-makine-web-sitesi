@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Logo } from "@/components/logo";
 import { company, navItems } from "@/lib/site-data";
 
 export function SiteHeader() {
@@ -12,23 +13,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/10 bg-slate-950/82 text-white shadow-2xl shadow-slate-950/10 backdrop-blur-xl">
       <nav className="section-shell flex min-h-20 items-center justify-between gap-6">
-        <Link
-          href="/"
-          className="flex items-center gap-3"
-          aria-label={`${company.name} ana sayfa`}
-          onClick={() => setIsOpen(false)}
-        >
-          <span className="relative grid size-11 place-items-center overflow-hidden rounded-xl border border-sky-300/30 bg-slate-900">
-            <span className="gear-mark absolute inset-1 rounded-full opacity-80" />
-            <span className="relative text-sm font-black tracking-tight text-sky-200">EM</span>
-          </span>
-          <span>
-            <span className="block text-lg font-black tracking-tight">{company.name}</span>
-            <span className="block text-xs uppercase tracking-[0.28em] text-slate-400">
-              Mühendislik
-            </span>
-          </span>
-        </Link>
+        <Logo onClick={() => setIsOpen(false)} />
 
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
