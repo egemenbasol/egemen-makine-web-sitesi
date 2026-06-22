@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { company, navItems, primaryServices } from "@/lib/site-data";
+import { company, navItems, services } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
@@ -29,7 +29,7 @@ export function SiteFooter() {
             Yetkinlikler
           </h2>
           <ul className="mt-5 space-y-3 text-sm text-slate-400">
-            {primaryServices.slice(0, 4).map((service) => (
+            {services.map((service) => (
               <li key={service.slug}>{service.title}</li>
             ))}
           </ul>

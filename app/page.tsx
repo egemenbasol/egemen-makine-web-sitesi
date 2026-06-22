@@ -6,7 +6,6 @@ import {
   company,
   processSteps,
   projects,
-  secondaryServices,
   stats,
 } from "@/lib/site-data";
 
@@ -87,7 +86,7 @@ export default function Home() {
                 <div className="relative z-10 flex h-full min-h-[466px] flex-col justify-between">
                   <div className="flex justify-between gap-4">
                     <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-sky-100">
-                      CNC · Tersine Mühendislik
+                      CNC Metal İşleme
                     </span>
                     <span className="grid size-14 place-items-center rounded-2xl bg-white/10">
                       <span className="gear-mark size-10 rounded-full" />
@@ -148,26 +147,6 @@ export default function Home() {
                   <h3 className="text-lg font-black text-slate-950">{step.title}</h3>
                   <p className="mt-1 text-sm leading-6 text-slate-600">{step.detail}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-slate-950 py-20 text-white">
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="Ek hizmetler"
-            title="Makine tasarımı ve otomasyon — proje bazında."
-            description="Ana odağımız CNC üretim ve tersine mühendislik olsa da, uygun projelerde makine tasarımı ve otomasyon desteği de sunuyoruz."
-            tone="dark"
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {secondaryServices.map((service) => (
-              <div key={service.slug} className="steel-panel rounded-[2rem] p-7">
-                <h3 className="text-xl font-black text-white">{service.title}</h3>
-                <p className="mt-3 leading-7 text-slate-300">{service.summary}</p>
-                <p className="mt-4 text-sm leading-7 text-slate-400">{service.details}</p>
               </div>
             ))}
           </div>

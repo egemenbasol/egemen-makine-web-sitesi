@@ -1,16 +1,16 @@
 export const company = {
   name: "Egemen Makine",
   legalName: "Egemen Makine Sanayi ve Mühendislik",
-  tagline: "CNC fason işleme ve tersine mühendislik",
+  tagline: "CNC Metal İşleme Ve Tersine Mühendislik",
   description:
-    "Egemen Makine; CNC tezgahlarında fason ve özel parça üretimi ile tersine mühendislik hizmeti sunar. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
+    "Egemen Makine; CNC tezgahlarında metal işleme, fason ve özel parça üretimi ile tersine mühendislik hizmeti sunar. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
   phone: "0532 505 92 56",
   phoneHref: "tel:+905325059256",
   email: "egemenbasol@egemenmakine.com.tr",
   emailHref: "mailto:egemenbasol@egemenmakine.com.tr",
   address: "Veysel Karani, 1144. Sk. 58/A, 03000 Afyonkarahisar Merkez/Afyonkarahisar",
   whatsapp:
-    "https://wa.me/905325059256?text=Merhaba%20Egemen%20Makine%2C%20CNC%20fason%20veya%20tersine%20mühendislik%20hakkında%20bilgi%20almak%20istiyorum.",
+    "https://wa.me/905325059256?text=Merhaba%20Egemen%20Makine%2C%20CNC%20metal%20işleme%20veya%20tersine%20mühendislik%20hakkında%20bilgi%20almak%20istiyorum.",
   mapLink: "https://share.google/OXMt8SIRqn6ZnmcBJ",
   mapEmbed:
     "https://www.google.com/maps?q=Veysel+Karani%2C+1144.+Sk.+58%2FA%2C+03000+Afyonkarahisar+Merkez%2FAfyonkarahisar&output=embed",
@@ -24,7 +24,7 @@ export const navItems = [
   { label: "İletişim", href: "/contact" },
 ];
 
-export const primaryServices = [
+export const services = [
   {
     title: "CNC fason ve özel parça üretimi",
     slug: "cnc-fason-uretim",
@@ -55,36 +55,28 @@ export const primaryServices = [
   {
     title: "CAD/CAM mühendisliği",
     slug: "cad-cam-muhendisligi",
-    summary:
-      "İşleme programı, takım yolu ve üretim verisi hazırlığı.",
+    summary: "İşleme programı, takım yolu ve üretim verisi hazırlığı.",
     details:
       "Teknik çizim veya tersine mühendislik çıktısından CNC programına kadar üretime hazır veri oluşturuyoruz. Tolerans, takım seçimi ve işleme stratejisi üretim kalitesini doğrudan etkiler.",
     metrics: "Üretime hazır program",
   },
-];
-
-export const secondaryServices = [
   {
     title: "Özel makine tasarımı",
     slug: "ozel-makine-tasarimi",
-    summary:
-      "İhtiyaca özel mekanik çözümler ve makine konseptleri.",
+    summary: "İhtiyaca özel mekanik çözümler ve makine konseptleri.",
     details:
-      "Ana odağımız CNC fason üretim ve tersine mühendislik olsa da, uygun projelerde özel makine ve fikstür tasarımı da sunuyoruz.",
+      "Üretim süreçlerine uygun özel makine, fikstür ve mekanik çözümler tasarlıyoruz. İhtiyaca göre konseptten imalata kadar destek sağlıyoruz.",
     metrics: "Proje bazlı tasarım",
   },
   {
     title: "Endüstriyel otomasyon",
     slug: "endustriyel-otomasyon",
-    summary:
-      "Seçili projelerde otomasyon ve entegrasyon desteği.",
+    summary: "Üretim hatları için otomasyon ve entegrasyon desteği.",
     details:
-      "Üretim hatlarına yönelik otomasyon ihtiyaçlarında, mevcut imalat kabiliyetimizle destek verebiliyoruz. Bu hizmet proje bazında değerlendirilir.",
-    metrics: "Proje bazlı destek",
+      "Üretim hatlarına yönelik otomasyon ihtiyaçlarında mekanik ve kontrol tarafında destek veriyoruz. Proje kapsamına göre entegrasyon ve devreye alma süreçlerinde yanınızdayız.",
+    metrics: "Entegrasyon desteği",
   },
 ];
-
-export const services = [...primaryServices, ...secondaryServices];
 
 export const projects = [
   {
@@ -130,23 +122,20 @@ export const processSteps = [
   },
   {
     title: "CNC işleme",
-    detail:
-      "Fason veya özel parça üretimi CNC tezgahlarda gerçekleştirilir.",
+    detail: "Fason veya özel parça üretimi CNC tezgahlarda gerçekleştirilir.",
   },
   {
     title: "Kalite kontrol",
-    detail:
-      "Kritik ölçüler kontrol edilir, yüzey ve tolerans doğrulaması yapılır.",
+    detail: "Kritik ölçüler kontrol edilir, yüzey ve tolerans doğrulaması yapılır.",
   },
   {
     title: "Teslimat ve tekrar üretim",
-    detail:
-      "Onaylanan parçalar teslim edilir; seri fason işlerde süreklilik sağlanır.",
+    detail: "Onaylanan parçalar teslim edilir; seri fason işlerde süreklilik sağlanır.",
   },
 ];
 
 export const stats = [
-  { value: "CNC", label: "Fason ve özel parça üretimi" },
+  { value: "CNC", label: "Metal işleme ve fason üretim" },
   { value: "3D", label: "Tersine mühendislik desteği" },
   { value: "Hızlı", label: "Teklif ve üretim süreci" },
 ];
@@ -158,21 +147,21 @@ export const serviceDeliverables = [
 ];
 
 export const servicePrinciples = [
-  "Önceliğimiz CNC tezgahlarda güvenilir fason ve özel parça üretimidir.",
+  "CNC tezgahlarda metal işleme ve fason üretim günlük işimizin merkezindedir.",
   "Çizimi olmayan parçalarda tersine mühendislik ile hızlı ve doğru çözüm sunarız.",
-  "Makine tasarımı ve otomasyon hizmetleri proje bazında, üretim kabiliyetimizi destekleyecek şekilde değerlendirilir.",
+  "Tüm hizmetlerimiz aynı üretim disiplini ve kalite anlayışıyla yürütülür.",
 ];
 
 export const projectMetrics = [
   { value: "Ölç", label: "Parça inceleme, ölçüm ve tarama" },
-  { value: "Üret", label: "CNC fason işleme ve özel parça imalatı" },
+  { value: "Üret", label: "CNC metal işleme ve özel parça imalatı" },
   { value: "Teslim", label: "Kalite kontrol ve zamanında teslimat" },
 ];
 
 export const principles = [
   {
     title: "Üretim odaklı çalışma",
-    text: "CNC tezgahlarda fason ve özel parça üretimi günlük işimizin merkezindedir.",
+    text: "CNC tezgahlarda metal işleme ve özel parça üretimi günlük işimizin merkezindedir.",
   },
   {
     title: "Tersine mühendislikte hız",

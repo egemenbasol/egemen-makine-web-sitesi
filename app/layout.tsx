@@ -6,7 +6,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { company } from "@/lib/site-data";
 
 const siteUrl = "https://egemenmakine.com.tr";
-const siteTitle = `${company.name} | CNC Fason İşleme ve Tersine Mühendislik`;
+const siteTitle = `${company.name} | CNC Metal İşleme Ve Tersine Mühendislik`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: company.description,
   keywords: [
     "Egemen Makine",
+    "CNC metal işleme",
     "CNC fason",
     "özel parça üretimi",
     "tersine mühendislik",

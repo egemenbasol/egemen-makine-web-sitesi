@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { GoogleMap } from "@/components/google-map";
 import { SectionHeading } from "@/components/section-heading";
-import { company, contactTips, primaryServices } from "@/lib/site-data";
+import { company, contactTips, services } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "İletişim",
@@ -97,8 +97,8 @@ export default function ContactPage() {
             <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
               Sık talep edilen hizmetler
             </p>
-            <div className="mt-8 grid gap-3 md:grid-cols-2">
-              {primaryServices.map((service) => (
+            <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+              {services.map((service) => (
                 <span
                   key={service.slug}
                   className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-bold text-slate-200"
