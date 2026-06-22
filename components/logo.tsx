@@ -22,7 +22,7 @@ export function Logo({
   className = "",
   onClick,
 }: LogoProps) {
-  const [logoSrc, setLogoSrc] = useState("/logo.png");
+  const [logoSrc, setLogoSrc] = useState("/logo.svg");
 
   const content = (
     <span className={`inline-flex items-center gap-3 ${className}`}>
