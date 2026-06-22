@@ -11,7 +11,7 @@ export default function Home() {
     "@type": "Organization",
     name: company.name,
     legalName: company.legalName,
-    url: "https://egemenmakine.com",
+    url: "https://egemenmakine.com.tr",
     email: company.email,
     telephone: company.phone,
     address: company.address,

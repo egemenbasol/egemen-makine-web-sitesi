@@ -4,15 +4,16 @@ export const company = {
   tagline: "Hassas makine, tersine mühendislik ve endüstriyel otomasyon çözümleri",
   description:
     "Egemen Makine; özel makine tasarımı, tersine mühendislik, 3D tarama, CAD/CAM, CNC imalat ve endüstriyel otomasyon alanlarında üretime hız, kalite ve güvenilirlik kazandıran mühendislik ortağınızdır.",
-  phone: "+90 555 000 00 00",
-  phoneHref: "tel:+905550000000",
-  email: "info@egemenmakine.com",
-  emailHref: "mailto:info@egemenmakine.com",
-  address: "Organize Sanayi Bölgesi, İstanbul, Türkiye",
+  phone: "+90 536 691 73 68",
+  phoneHref: "tel:+905366917368",
+  email: "egemenbasol@egemenmakine.com.tr",
+  emailHref: "mailto:egemenbasol@egemenmakine.com.tr",
+  address: "Kemalpaşa, Sanayi Sitesi 2541 Sk No:18/A, 33460 Tarsus/Mersin",
   whatsapp:
-    "https://wa.me/905550000000?text=Merhaba%20Egemen%20Makine%2C%20projem%20hakkında%20bilgi%20almak%20istiyorum.",
+    "https://wa.me/905366917368?text=Merhaba%20Egemen%20Makine%2C%20projem%20hakkında%20bilgi%20almak%20istiyorum.",
+  mapLink: "https://share.google/OXMt8SIRqn6ZnmcBJ",
   mapEmbed:
-    "https://www.google.com/maps?q=Istanbul%20Organize%20Sanayi%20Bolgesi&output=embed",
+    "https://www.google.com/maps?q=Kemalpa%C5%9Fa+Sanayi+Sitesi+2541+Sk+No18%2FA+33460+Tarsus+Mersin&output=embed",
 };
 
 export const navItems = [

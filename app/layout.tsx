@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { company } from "@/lib/site-data";
 
-const siteUrl = "https://egemenmakine.com";
+const siteUrl = "https://egemenmakine.com.tr";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
