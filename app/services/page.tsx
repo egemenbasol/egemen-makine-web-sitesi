@@ -6,7 +6,7 @@ import { company, serviceDeliverables, servicePrinciples, services } from "@/lib
 export const metadata: Metadata = {
   title: "Hizmetler",
   description:
-    "Egemen Makine CNC metal işleme, fason üretim, tersine mühendislik, 3D tarama, CAD/CAM, özel makine tasarımı ve otomasyon hizmetleri.",
+    "Egemen Makine CNC metal işleme, fason üretim, tersine mühendislik, PLC programlama, otomasyon, üretim hattı, 3D tarama ve CAD/CAM hizmetleri.",
   alternates: {
     canonical: "/services",
   },
@@ -19,7 +19,7 @@ export default function ServicesPage() {
         <div className="section-shell relative z-10">
           <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">Hizmetler</p>
           <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-            CNC metal işleme ve mühendislik hizmetlerimiz.
+            CNC metal işleme, otomasyon ve mühendislik hizmetlerimiz.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{company.description}</p>
         </div>
@@ -30,7 +30,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Hizmetlerimiz"
             title="Altı hizmet, tek üretim disiplini."
-            description="CNC metal işlemeden tersine mühendisliğe, CAD/CAM'den makine tasarımı ve otomasyona kadar tüm hizmetlerimiz ard arda aynı kalite anlayışıyla sunulur."
+            description="CNC metal işlemeden tersine mühendisliğe, PLC programlama ve üretim hattı otomasyonundan makine tasarımına kadar tüm hizmetlerimiz ard arda aynı kalite anlayışıyla sunulur."
           />
 
           <div className="mt-12 grid gap-6">

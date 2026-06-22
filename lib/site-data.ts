@@ -3,7 +3,7 @@ export const company = {
   legalName: "Egemen Makine Sanayi ve Mühendislik",
   tagline: "CNC Metal İşleme Ve Tersine Mühendislik",
   description:
-    "Egemen Makine; CNC tezgahlarında metal işleme, fason ve özel parça üretimi ile tersine mühendislik hizmeti sunar. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
+    "Egemen Makine; CNC tezgahlarında metal işleme, fason ve özel parça üretimi ile tersine mühendislik hizmeti sunar. PLC programlama, otomasyon ve üretim hattı çözümleri de geliştirir. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
   phone: "0532 505 92 56",
   phoneHref: "tel:+905325059256",
   email: "egemenbasol@egemenmakine.com.tr",
@@ -69,12 +69,12 @@ export const services = [
     metrics: "Proje bazlı tasarım",
   },
   {
-    title: "Endüstriyel otomasyon",
+    title: "PLC programlama ve otomasyon",
     slug: "endustriyel-otomasyon",
-    summary: "Üretim hatları için otomasyon ve entegrasyon desteği.",
+    summary: "PLC programlama, otomasyon ve üretim hattı çözümleri.",
     details:
-      "Üretim hatlarına yönelik otomasyon ihtiyaçlarında mekanik ve kontrol tarafında destek veriyoruz. Proje kapsamına göre entegrasyon ve devreye alma süreçlerinde yanınızdayız.",
-    metrics: "Entegrasyon desteği",
+      "Üretim hatları için PLC programlama, sensör-aktüatör entegrasyonu, kontrol panosu ve otomasyon mantığı geliştiriyoruz. Hat verimliliğini artıran, güvenli ve sürdürülebilir otomasyon sistemlerinin kurulumu ve devreye alınmasında destek sağlıyoruz.",
+    metrics: "Üretim hattı otomasyonu",
   },
 ];
 
@@ -149,7 +149,7 @@ export const serviceDeliverables = [
 export const servicePrinciples = [
   "CNC tezgahlarda metal işleme ve fason üretim günlük işimizin merkezindedir.",
   "Çizimi olmayan parçalarda tersine mühendislik ile hızlı ve doğru çözüm sunarız.",
-  "Tüm hizmetlerimiz aynı üretim disiplini ve kalite anlayışıyla yürütülür.",
+  "Tüm hizmetlerimiz; CNC metal işleme, tersine mühendislik ve üretim hattı otomasyonu dahil aynı kalite anlayışıyla yürütülür.",
 ];
 
 export const projectMetrics = [
