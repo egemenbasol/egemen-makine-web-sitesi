@@ -3,7 +3,14 @@ import { CtaSection } from "@/components/cta-section";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
-import { company, processSteps, projects, services, stats } from "@/lib/site-data";
+import {
+  company,
+  primaryServices,
+  processSteps,
+  projects,
+  secondaryServices,
+  stats,
+} from "@/lib/site-data";
 
 export default function Home() {
   const structuredData = {
@@ -30,10 +37,10 @@ export default function Home() {
         <div className="section-shell relative z-10 grid min-h-[calc(100vh-5rem)] gap-12 py-20 lg:grid-cols-[1.06fr_0.94fr] lg:items-center">
           <div className="animate-fade-up">
             <p className="inline-flex rounded-full border border-sky-300/30 bg-sky-300/10 px-4 py-2 text-sm font-black uppercase tracking-[0.24em] text-sky-200">
-              Premium endüstriyel mühendislik
+              {company.tagline}
             </p>
             <h1 className="mt-6 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              Zorlu üretim hatları için hassas makineler ve otomasyon.
+              CNC tezgahlarında fason ve özel parça üretimi.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
               {company.description}
@@ -46,10 +53,10 @@ export default function Home() {
                 Teklif Alın
               </Link>
               <Link
-                href="/projects"
+                href="/services"
                 className="rounded-full border border-white/15 bg-white/10 px-7 py-4 text-center text-sm font-black text-white transition hover:bg-white hover:text-slate-950"
               >
-                Projeleri İncele
+                Hizmetleri İncele
               </Link>
             </div>
 
@@ -82,7 +89,7 @@ export default function Home() {
                 <div className="relative z-10 flex h-full min-h-[466px] flex-col justify-between">
                   <div className="flex justify-between gap-4">
                     <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-sky-100">
-                      CNC / CAD / Otomasyon
+                      CNC · Tersine Mühendislik
                     </span>
                     <span className="grid size-14 place-items-center rounded-2xl bg-white/10">
                       <span className="gear-mark size-10 rounded-full" />
@@ -90,10 +97,10 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm uppercase tracking-[0.26em] text-slate-300">
-                      Üretime hazır sistemler
+                      Atölyeden sahaya
                     </p>
                     <h2 className="mt-3 max-w-md text-4xl font-black tracking-tight text-white">
-                      Tasarla. Doğrula. Üret. Otomatize Et.
+                      Ölç. Modelle. İşle. Teslim Et.
                     </h2>
                   </div>
                 </div>
@@ -106,12 +113,12 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Yetkinlikler"
-            title="Endüstriyel performansa odaklanan mühendislik hizmetleri."
-            description="Egemen Makine; saha deneyimi, dijital mühendislik ve hassas imalatı bir araya getirerek konseptten devreye almaya kadar üretim zorluklarını çözer."
+            eyebrow="Ana hizmetlerimiz"
+            title="CNC fason üretim ve tersine mühendislikte uzman çözümler."
+            description="Günlük işimiz CNC tezgahlarda parça üretmek ve çizimi olmayan parçaları yeniden üretilebilir hale getirmektir."
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {primaryServices.map((service) => (
               <ServiceCard key={service.slug} {...service} />
             ))}
           </div>
@@ -122,9 +129,9 @@ export default function Home() {
         <div className="section-shell">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
-              eyebrow="Seçilmiş projeler"
-              title="Ölçülebilir üretim değeri sunan endüstriyel çözümler."
-              description="Makine tasarımı, tersine mühendislik, CNC ve otomasyon çalışmalarından örnek bir vitrin."
+              eyebrow="Üretim örnekleri"
+              title="Fason işleme ve tersine mühendislik projeleri."
+              description="CNC fason parça üretimi ve çizimsiz parça kurtarma çalışmalarından örnekler."
             />
             <Link
               href="/projects"
@@ -144,9 +151,9 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="section-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
-            eyebrow="Süreç"
-            title="Gereksinimden güvenilir çıktıya net bir mühendislik yolu."
-            description="Her proje pratik teslimatlar, teknik şeffaflık ve üretim kısıtları etrafında yönetilir."
+            eyebrow="Üretim süreci"
+            title="Tekliften teslimata net ve hızlı iş akışı."
+            description="Fason iş veya tersine mühendislik projelerinde her adım üretim odaklı ilerler."
           />
           <div className="space-y-4">
             {processSteps.map((step, index) => (
@@ -158,6 +165,26 @@ export default function Home() {
                   <h3 className="text-lg font-black text-slate-950">{step.title}</h3>
                   <p className="mt-1 text-sm leading-6 text-slate-600">{step.detail}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-950 py-20 text-white">
+        <div className="section-shell">
+          <SectionHeading
+            eyebrow="Ek hizmetler"
+            title="Makine tasarımı ve otomasyon — proje bazında."
+            description="Ana odağımız CNC üretim ve tersine mühendislik olsa da, uygun projelerde makine tasarımı ve otomasyon desteği de sunuyoruz."
+            tone="dark"
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {secondaryServices.map((service) => (
+              <div key={service.slug} className="steel-panel rounded-[2rem] p-7">
+                <h3 className="text-xl font-black text-white">{service.title}</h3>
+                <p className="mt-3 leading-7 text-slate-300">{service.summary}</p>
+                <p className="mt-4 text-sm leading-7 text-slate-400">{service.details}</p>
               </div>
             ))}
           </div>

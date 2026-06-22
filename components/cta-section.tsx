@@ -7,14 +7,14 @@ export function CtaSection() {
       <div className="section-shell relative z-10 grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
-            Mühendislik görüşmesini başlatın
+            Hemen teklif alın
           </p>
           <h2 className="mt-4 max-w-3xl text-3xl font-black tracking-tight md:text-5xl">
-            Üretim için makine, fikstür, taranmış model veya otomasyon hücresi mi gerekiyor?
+            CNC fason işleme veya tersine mühendislik için parçanızı gönderin.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-            Teknik ihtiyacınızı paylaşın; Egemen Makine gereksinimden güvenilir üretim çıktısına en
-            hızlı pratik yolu birlikte belirlesin.
+            Çizimli fason işler ve çizimsiz parça kurtarma taleplerinde hızlı değerlendirme ve
+            net üretim planı sunuyoruz.
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row md:justify-end">

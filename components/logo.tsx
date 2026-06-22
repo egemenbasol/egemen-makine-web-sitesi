@@ -18,7 +18,7 @@ export function Logo({
   href = "/",
   size = 44,
   showText = true,
-  subtitle = "Mühendislik",
+  subtitle = company.tagline,
   className = "",
   onClick,
 }: LogoProps) {

@@ -6,22 +6,24 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { company } from "@/lib/site-data";
 
 const siteUrl = "https://egemenmakine.com.tr";
+const siteTitle = `${company.name} | CNC Fason İşleme ve Tersine Mühendislik`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${company.name} | Premium Endüstriyel Mühendislik`,
+    default: siteTitle,
     template: `%s | ${company.name}`,
   },
   description: company.description,
   keywords: [
     "Egemen Makine",
-    "özel makine tasarımı",
+    "CNC fason",
+    "özel parça üretimi",
     "tersine mühendislik",
     "3D tarama",
-    "CAD CAM mühendisliği",
-    "CNC imalat",
-    "endüstriyel otomasyon",
+    "CAD CAM",
+    "CNC işleme",
+    "Afyonkarahisar",
   ],
   authors: [{ name: company.name }],
   creator: company.name,
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     url: siteUrl,
     siteName: company.name,
-    title: `${company.name} | Premium Endüstriyel Mühendislik`,
+    title: siteTitle,
     description: company.description,
   },
   icons: {
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${company.name} | Premium Endüstriyel Mühendislik`,
+    title: siteTitle,
     description: company.description,
   },
   robots: {

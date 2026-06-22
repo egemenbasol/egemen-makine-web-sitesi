@@ -7,7 +7,7 @@ import { company, principles, processSteps, stats } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Makine tasarımı, tersine mühendislik, CNC imalat ve otomasyon alanlarında endüstriyel mühendislik ortağı Egemen Makine hakkında bilgi edinin.",
+    "Egemen Makine; CNC fason işleme, özel parça üretimi ve tersine mühendislik alanında Afyonkarahisar merkezli üretim atölyesi.",
   alternates: {
     canonical: "/about",
   },
@@ -23,7 +23,7 @@ export default function AboutPage() {
               Egemen Makine Hakkında
             </p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              Endüstriyel üreticiler için odaklanmış bir mühendislik ortağı.
+              CNC fason üretim ve tersine mühendislikte güvenilir atölye.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
               {company.description}
@@ -32,10 +32,10 @@ export default function AboutPage() {
           <div className="steel-panel rounded-[2.5rem] p-6">
             <div className="machine-card min-h-[360px] rounded-[2rem] p-7 text-white">
               <span className="gear-mark block size-20 rounded-full" />
-              <h2 className="mt-20 text-4xl font-black tracking-tight">Atölye için tasarlandı.</h2>
+              <h2 className="mt-20 text-4xl font-black tracking-tight">Atölyeden üretime.</h2>
               <p className="mt-4 leading-7 text-slate-300">
-                Mekanik mühendislik, hassas işleme ve otomasyonu bir araya getirerek proje
-                devirlerini net tutar, üretim riskini görünür kılarız.
+                CNC tezgahlarda fason işleme ve çizimi olmayan parçaların tersine mühendisliği
+                günlük işimizin merkezinde yer alır.
               </p>
             </div>
           </div>
@@ -46,8 +46,8 @@ export default function AboutPage() {
         <div className="section-shell grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionHeading
             eyebrow="Şirket profili"
-            title="Endüstriyel yaşam döngüsünün tamamında mühendislik desteği."
-            description="Egemen Makine; mevcut parçaları ölçme, veriyi yeniden oluşturma, mekanizma tasarlama, CNC üretimi hazırlama ve otomasyon entegrasyonu gerektiren ekiplerle çalışır."
+            title="Üretim kabiliyeti ve mühendislik desteği bir arada."
+            description="Egemen Makine; çizimli fason işler, çizimsiz parça kurtarma ve gerektiğinde makine tasarımı projelerinde müşterilerine destek verir."
           />
           <div className="grid gap-5">
             {principles.map((principle) => (
@@ -76,8 +76,8 @@ export default function AboutPage() {
           <div className="mt-12 light-panel rounded-[2.25rem] p-6 md:p-10">
             <SectionHeading
               eyebrow="Nasıl çalışıyoruz"
-              title="Gereksiz karmaşıklık olmadan yapılandırılmış teslimat."
-              description="Süreç, teknik paydaşlar için yeterince şeffaf ve üretim ekipleri için yeterince pratiktir."
+              title="Tekliften teslimata şeffaf süreç."
+              description="Fason iş veya tersine mühendislik projelerinde adımlar net, iletişim açıktır."
             />
             <div className="mt-10 grid gap-4 md:grid-cols-5">
               {processSteps.map((step, index) => (
@@ -97,17 +97,17 @@ export default function AboutPage() {
         <div className="section-shell flex flex-col gap-5 rounded-[2.25rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-950/5 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="text-3xl font-black tracking-tight text-slate-950">
-              İncelenmeye hazır bir teknik ihtiyacınız mı var?
+              Fason iş veya tersine mühendislik için teklif alın.
             </h2>
             <p className="mt-3 text-slate-600">
-              Çizimler, fotoğraflar, tarama verileri veya kısa bir süreç açıklaması gönderin.
+              Çizim, fotoğraf, numune veya kısa bir parça açıklaması göndermeniz yeterli.
             </p>
           </div>
           <Link
             href="/contact"
             className="rounded-full bg-slate-950 px-7 py-4 text-center text-sm font-black text-white transition hover:bg-slate-800"
           >
-            Mühendislik ile İletişim
+            İletişime Geçin
           </Link>
         </div>
       </section>

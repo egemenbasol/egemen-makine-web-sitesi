@@ -1,16 +1,16 @@
 export const company = {
   name: "Egemen Makine",
   legalName: "Egemen Makine Sanayi ve Mühendislik",
-  tagline: "Hassas makine, tersine mühendislik ve endüstriyel otomasyon çözümleri",
+  tagline: "CNC fason işleme ve tersine mühendislik",
   description:
-    "Egemen Makine; özel makine tasarımı, tersine mühendislik, 3D tarama, CAD/CAM, CNC imalat ve endüstriyel otomasyon alanlarında üretime hız, kalite ve güvenilirlik kazandıran mühendislik ortağınızdır.",
-  phone: "+90 536 691 73 68",
-  phoneHref: "tel:+905366917368",
+    "Egemen Makine; CNC tezgahlarında fason ve özel parça üretimi ile tersine mühendislik hizmeti sunar. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
+  phone: "0532 505 92 56",
+  phoneHref: "tel:+905325059256",
   email: "egemenbasol@egemenmakine.com.tr",
   emailHref: "mailto:egemenbasol@egemenmakine.com.tr",
   address: "Veysel Karani, 1144. Sk. 58/A, 03000 Afyonkarahisar Merkez/Afyonkarahisar",
   whatsapp:
-    "https://wa.me/905366917368?text=Merhaba%20Egemen%20Makine%2C%20projem%20hakkında%20bilgi%20almak%20istiyorum.",
+    "https://wa.me/905325059256?text=Merhaba%20Egemen%20Makine%2C%20CNC%20fason%20veya%20tersine%20mühendislik%20hakkında%20bilgi%20almak%20istiyorum.",
   mapLink: "https://share.google/OXMt8SIRqn6ZnmcBJ",
   mapEmbed:
     "https://www.google.com/maps?q=Veysel+Karani%2C+1144.+Sk.+58%2FA%2C+03000+Afyonkarahisar+Merkez%2FAfyonkarahisar&output=embed",
@@ -24,164 +24,169 @@ export const navItems = [
   { label: "İletişim", href: "/contact" },
 ];
 
-export const services = [
+export const primaryServices = [
   {
-    title: "Özel makine tasarımı",
-    slug: "ozel-makine-tasarimi",
+    title: "CNC fason ve özel parça üretimi",
+    slug: "cnc-fason-uretim",
     summary:
-      "Üretim hedefleri, güvenlik gereksinimleri ve bakım kolaylığına göre tasarlanan özel makineler.",
+      "CNC tezgahlarımızda tek parçadan seri üretime kadar fason işleme ve özel parça imalatı.",
     details:
-      "Konsept eskizlerinden devreye almaya hazır mekanik montajlara kadar, sürecinizi makineye uydurmak yerine sürecinize uygun sağlam sistemler tasarlıyoruz.",
-    metrics: "Konseptten detay tasarıma",
+      "Torna, freze ve işleme merkezlerimizde çelik, paslanmaz, alüminyum ve mühendislik plastiklerinde toleranslı üretim yapıyoruz. Prototip, yedek parça ve tekrarlayan fason işler için hızlı ve kontrollü teslimat sunuyoruz.",
+    metrics: "Fason CNC işleme",
   },
   {
     title: "Tersine mühendislik",
     slug: "tersine-muhendislik",
     summary:
-      "Eski parçaların, fikstürlerin ve makine montajlarının doğru şekilde yeniden üretilmesi ve iyileştirilmesi.",
+      "Çizimi olmayan, eski veya aşınmış parçaların ölçülerek yeniden üretilebilir hale getirilmesi.",
     details:
-      "Geometriyi ölçüyor, aşınma noktalarını değerlendiriyor ve dokümantasyonu eksik veya güncel olmayan parçalar için üretilebilir CAD verisi oluşturuyoruz.",
-    metrics: "Eski parça kurtarma",
+      "Parçayı ölçüyor, gerekirse 3D tarıyor ve üretime uygun CAD modeli oluşturuyoruz. Dokümantasyonu kaybolmuş kritik bileşenler için hızlı ve güvenilir çözüm sağlıyoruz.",
+    metrics: "Ölçüm ve modelleme",
   },
   {
     title: "3D tarama",
     slug: "3d-tarama",
     summary:
-      "Muayene, yeniden tasarım, kalite kontrolü ve dokümantasyon için yüksek çözünürlüklü dijital ölçüm.",
+      "Parça geometrisinin dijital ortama aktarılması, ölçüm ve tersine mühendislik için veri üretimi.",
     details:
-      "Taramadan CAD'e iş akışımız, gerçek parçaları nominal tasarımlarla karşılaştırmanıza ve mühendislik kararlarını hızlandırmanıza yardımcı olur.",
-    metrics: "Taramadan CAD'e",
+      "Tarama verisini CAD ortamına taşıyarak ölçüm, karşılaştırma ve yeniden üretim sürecini hızlandırıyoruz. Karmaşık yüzeyli parçalarda manuel ölçüme göre daha hızlı sonuç alınır.",
+    metrics: "Taramadan modele",
   },
   {
     title: "CAD/CAM mühendisliği",
     slug: "cad-cam-muhendisligi",
     summary:
-      "Üretime hazır modelleme, montajlar, teknik çizimler, takım yolları ve işleme hazırlığı.",
+      "İşleme programı, takım yolu ve üretim verisi hazırlığı.",
     details:
-      "Mühendislik niyetini toleranslar, malzeme davranışı ve çevrim verimliliği dikkate alınarak net üretim paketlerine dönüştürüyoruz.",
-    metrics: "Üretime hazır veri",
+      "Teknik çizim veya tersine mühendislik çıktısından CNC programına kadar üretime hazır veri oluşturuyoruz. Tolerans, takım seçimi ve işleme stratejisi üretim kalitesini doğrudan etkiler.",
+    metrics: "Üretime hazır program",
   },
+];
+
+export const secondaryServices = [
   {
-    title: "CNC imalat",
-    slug: "cnc-imalat",
+    title: "Özel makine tasarımı",
+    slug: "ozel-makine-tasarimi",
     summary:
-      "Prototipler, fikstürler, yedek parçalar ve tekrarlanabilir üretim bileşenleri için hassas işleme.",
+      "İhtiyaca özel mekanik çözümler ve makine konseptleri.",
     details:
-      "CNC imalat yaklaşımımız istikrarlı süreçler, izlenebilir kalite kontrolleri ve tutarlı teslimat üzerine kuruludur.",
-    metrics: "Hassas işleme",
+      "Ana odağımız CNC fason üretim ve tersine mühendislik olsa da, uygun projelerde özel makine ve fikstür tasarımı da sunuyoruz.",
+    metrics: "Proje bazlı tasarım",
   },
   {
     title: "Endüstriyel otomasyon",
     slug: "endustriyel-otomasyon",
     summary:
-      "Daha güvenli ve hızlı üretim hatları için otomasyon hücreleri, kontrol mantığı ve entegrasyon desteği.",
+      "Seçili projelerde otomasyon ve entegrasyon desteği.",
     details:
-      "Mekanik tasarım, sensörler, kontrol panelleri ve üretim iş akışlarını pratik otomasyon sistemlerinde bir araya getiriyoruz.",
-    metrics: "Entegre kontrol sistemleri",
+      "Üretim hatlarına yönelik otomasyon ihtiyaçlarında, mevcut imalat kabiliyetimizle destek verebiliyoruz. Bu hizmet proje bazında değerlendirilir.",
+    metrics: "Proje bazlı destek",
   },
 ];
 
+export const services = [...primaryServices, ...secondaryServices];
+
 export const projects = [
   {
-    title: "Robotik transfer ve fikstür hücresi",
-    sector: "Otomotiv tedarikçisi",
+    title: "Seri fason CNC parça üretimi",
+    sector: "Makine imalat",
     summary:
-      "Özel fikstürler, pnömatik taşıma ve operatör güvenliği için erişim bölgeleri içeren kompakt bir otomasyon hücresi.",
-    tags: ["Otomasyon", "Fikstür tasarımı", "Güvenlik"],
+      "Teknik çizimle gelen çelik ve alüminyum bileşenlerin CNC işleme merkezinde seri fason üretimi ve kalite kontrollü teslimatı.",
+    tags: ["CNC fason", "Seri üretim", "Kalite kontrol"],
   },
   {
-    title: "Eski şanzıman tersine mühendisliği",
+    title: "Eski şanzıman gövdesi tersine mühendislik",
     sector: "Ağır sanayi",
     summary:
-      "Üretimi durdurulmuş kritik bir şanzıman gövdesi için 3D tarama, ölçüm doğrulaması ve üretilebilir CAD yeniden oluşturma.",
+      "Üretimi durmuş kritik bir şanzıman gövdesinin ölçülmesi, CAD modelinin oluşturulması ve CNC ile yeniden üretilmesi.",
     tags: ["Tersine mühendislik", "3D tarama", "CNC"],
   },
   {
-    title: "Yüksek hassasiyetli CNC üretim fikstürü",
-    sector: "Havacılık işleme",
+    title: "Yüksek hassasiyetli işleme fikstürü",
+    sector: "Havacılık tedarikçisi",
     summary:
-      "Kurulum farklılıklarını azaltan ve üretim partileri arasında tekrarlanabilirliği artıran modüler fikstür mimarisi.",
-    tags: ["CAD/CAM", "CNC imalat", "Kalite"],
+      "Tekrarlayan CNC işlemlerinde kurulum süresini azaltan ve toleransı koruyan özel fikstürün tasarımı ve üretimi.",
+    tags: ["CAD/CAM", "CNC imalat", "Fikstür"],
   },
   {
-    title: "Ambalaj hattı modernizasyonu",
-    sector: "Gıda üretimi",
+    title: "Çizimsiz yedek parça üretimi",
+    sector: "Gıda makineleri",
     summary:
-      "Hijyen ve bakım erişimini koruyarak verimi artırmak için mekanik yeniden tasarım ve sensör entegrasyonu.",
-    tags: ["Makine tasarımı", "Otomasyon", "Devreye alma"],
+      "Orijinal çizimi bulunmayan aşınmış parçanın ölçülerek modelenmesi ve CNC ile yeniden imal edilmesi.",
+    tags: ["Tersine mühendislik", "Yedek parça", "CNC"],
   },
 ];
 
 export const processSteps = [
   {
-    title: "Keşif ve teknik değerlendirme",
+    title: "Teknik inceleme ve ölçüm",
     detail:
-      "Kilometre taşları dokümante edilir; mekanik, imalat ve otomasyon kararları hedef sonuçla uyumlu kalır.",
+      "Parça, çizim veya numune üzerinden tolerans, malzeme ve adet bilgisi netleştirilir.",
   },
   {
-    title: "Konsept mühendisliği ve risk analizi",
+    title: "CAD/CAM veya tersine mühendislik",
     detail:
-      "Teknik riskler erken aşamada belirlenir ve proje kapsamı netleştirilir.",
+      "Çizim varsa işleme programı hazırlanır; yoksa ölçüm ve tarama ile model oluşturulur.",
   },
   {
-    title: "CAD/CAM geliştirme ve prototipleme",
+    title: "CNC işleme",
     detail:
-      "Dijital modeller ve prototiplerle tasarım doğrulanır, üretim öncesi revizyonlar tamamlanır.",
+      "Fason veya özel parça üretimi CNC tezgahlarda gerçekleştirilir.",
   },
   {
-    title: "İmalat, montaj ve doğrulama",
+    title: "Kalite kontrol",
     detail:
-      "Parçalar üretilir, montaj yapılır ve kalite kontrolleriyle performans doğrulanır.",
+      "Kritik ölçüler kontrol edilir, yüzey ve tolerans doğrulaması yapılır.",
   },
   {
-    title: "Devreye alma desteği ve sürekli iyileştirme",
+    title: "Teslimat ve tekrar üretim",
     detail:
-      "Sahada devreye alma sonrası destek ve üretim verimliliğini artıran iyileştirmeler sağlanır.",
+      "Onaylanan parçalar teslim edilir; seri fason işlerde süreklilik sağlanır.",
   },
 ];
 
 export const stats = [
-  { value: "6", label: "Temel mühendislik hizmeti" },
-  { value: "360°", label: "Uçtan uca proje bakışı" },
-  { value: "7/24", label: "Üretim odaklı destek" },
+  { value: "CNC", label: "Fason ve özel parça üretimi" },
+  { value: "3D", label: "Tersine mühendislik desteği" },
+  { value: "Hızlı", label: "Teklif ve üretim süreci" },
 ];
 
 export const serviceDeliverables = [
-  "Mühendislik incelemesi",
-  "Üretim verisi",
-  "Kalite doğrulaması",
+  "Teknik değerlendirme",
+  "İşleme / model verisi",
+  "Kalite kontrol",
 ];
 
 export const servicePrinciples = [
-  "Mekanik tasarım kararları üretilebilirlik ve servis edilebilirlik açısından değerlendirilir.",
-  "Dijital mühendislik verisi gerçek üretim ortamları için hazırlanır, yalnızca sunum için değil.",
-  "Otomasyon konseptleri operatör güvenliği, çalışma süresi ve uzun vadeli bakım kolaylığını önceler.",
+  "Önceliğimiz CNC tezgahlarda güvenilir fason ve özel parça üretimidir.",
+  "Çizimi olmayan parçalarda tersine mühendislik ile hızlı ve doğru çözüm sunarız.",
+  "Makine tasarımı ve otomasyon hizmetleri proje bazında, üretim kabiliyetimizi destekleyecek şekilde değerlendirilir.",
 ];
 
 export const projectMetrics = [
-  { value: "Tasarım", label: "Mekanik konseptler, modeller ve üretim paketleri" },
-  { value: "İmalat", label: "CNC işleme, montaj, muayene ve iterasyon" },
-  { value: "Entegrasyon", label: "Otomasyon, kontrol ve devreye alma desteği" },
+  { value: "Ölç", label: "Parça inceleme, ölçüm ve tarama" },
+  { value: "Üret", label: "CNC fason işleme ve özel parça imalatı" },
+  { value: "Teslim", label: "Kalite kontrol ve zamanında teslimat" },
 ];
 
 export const principles = [
   {
-    title: "Üretim öncelikli yaklaşım",
-    text: "Mühendislik kararları gerçek üretim kısıtları, bakım erişimi ve operatör iş akışına göre test edilir.",
+    title: "Üretim odaklı çalışma",
+    text: "CNC tezgahlarda fason ve özel parça üretimi günlük işimizin merkezindedir.",
   },
   {
-    title: "Dijital doğruluk",
-    text: "CAD/CAM ve 3D tarama iş akışları yeniden tasarım, muayene ve imalat için güvenilir teknik temel sağlar.",
+    title: "Tersine mühendislikte hız",
+    text: "Çizimi kaybolmuş veya eskimiş parçaları ölçerek kısa sürede yeniden üretilebilir hale getiririz.",
   },
   {
-    title: "Kalıcı uygulama",
-    text: "Tasarım, işleme ve otomasyon çalışmaları uzun hizmet ömrü ve tekrarlanabilir endüstriyel performans için planlanır.",
+    title: "Net süreç",
+    text: "Teklif, üretim ve teslimat adımları şeffaf ilerler; müşteri her aşamada ne bekleyeceğini bilir.",
   },
 ];
 
 export const contactTips = [
-  "Varsa teknik çizimler veya CAD dosyaları",
-  "Parça fotoğrafları, ölçüler veya 3D tarama gereksinimleri",
-  "Malzeme, tolerans, adet ve üretim hedefleri",
-  "Otomasyon çevrim süresi, güvenlik ve entegrasyon ihtiyaçları",
+  "Varsa teknik çizim veya CAD dosyası",
+  "Parça fotoğrafı, ölçü veya numune bilgisi",
+  "Malzeme, tolerans, adet ve teslim süresi",
+  "Çizimsiz parçalar için tersine mühendislik ihtiyacı",
 ];

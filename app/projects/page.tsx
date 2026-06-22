@@ -7,7 +7,7 @@ import { projectMetrics, projects } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Projeler",
   description:
-    "Egemen Makine'nin özel makine tasarımı, tersine mühendislik, CNC imalat ve endüstriyel otomasyon projelerinden seçilmiş örnekler.",
+    "Egemen Makine CNC fason üretim, özel parça imalatı ve tersine mühendislik projelerinden örnekler.",
   alternates: {
     canonical: "/projects",
   },
@@ -21,12 +21,12 @@ export default function ProjectsPage() {
           <div>
             <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">Projeler</p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              Üretim kritik işler için endüstriyel proje vitrini.
+              CNC fason ve tersine mühendislik çalışmalarımız.
             </h1>
           </div>
           <p className="text-lg leading-8 text-slate-300">
-            Bu örnek projeler, Egemen Makine mühendislik netliğini imalat disiplini ve pratik
-            atölye uygulamasıyla nasıl birleştirdiğini gösterir.
+            Fason parça üretiminden çizimsiz yedek parça kurtarmaya kadar gerçek atölye
+            deneyimimizi yansıtan örnekler.
           </p>
         </div>
       </section>
@@ -35,8 +35,8 @@ export default function ProjectsPage() {
         <div className="section-shell">
           <SectionHeading
             eyebrow="Vitrin"
-            title="Tersine mühendislik parçalardan tam otomasyon hücrelerine."
-            description="Proje kapsamları üretim ortamı, mevcut veri ve hedef performansa göre şekillendirilir."
+            title="Üretim odaklı proje örnekleri."
+            description="Tek parça, seri fason iş veya tersine mühendislik gerektiren işlerde aynı disiplinle çalışıyoruz."
           />
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -50,9 +50,9 @@ export default function ProjectsPage() {
       <section className="bg-slate-950 py-20 text-white md:py-28">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Teslimat modeli"
-            title="Teknik belirsizliği azaltan proje yapısı."
-            description="Aynı mühendislik yaklaşımı, tek bir hassas bileşen veya eksiksiz bir otomasyon hücresi gereksiniminde de geçerlidir."
+            eyebrow="Çalışma modeli"
+            title="Ölçümden teslimata kadar net süreç."
+            description="Her proje ölçüm, üretim ve kalite kontrol adımlarıyla yönetilir."
             tone="dark"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">

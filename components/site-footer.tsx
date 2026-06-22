@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { company, navItems, services } from "@/lib/site-data";
+import { company, navItems, primaryServices } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
     <footer className="bg-slate-950 text-white">
       <div className="section-shell grid gap-10 py-14 md:grid-cols-[1.3fr_0.7fr_0.8fr]">
         <div>
-          <Logo subtitle="Endüstriyel Mühendislik" size={48} className="text-white" />
+          <Logo subtitle={company.tagline} size={48} className="text-white" />
           <p className="mt-5 max-w-lg text-sm leading-7 text-slate-400">{company.description}</p>
         </div>
 
@@ -29,7 +29,7 @@ export function SiteFooter() {
             Yetkinlikler
           </h2>
           <ul className="mt-5 space-y-3 text-sm text-slate-400">
-            {services.slice(0, 4).map((service) => (
+            {primaryServices.slice(0, 4).map((service) => (
               <li key={service.slug}>{service.title}</li>
             ))}
           </ul>

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { GoogleMap } from "@/components/google-map";
 import { SectionHeading } from "@/components/section-heading";
-import { company, contactTips, services } from "@/lib/site-data";
+import { company, contactTips, primaryServices } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "İletişim",
   description:
-    "Özel makine tasarımı, tersine mühendislik, 3D tarama, CAD/CAM, CNC imalat ve endüstriyel otomasyon projeleri için Egemen Makine ile iletişime geçin.",
+    "CNC fason işleme, özel parça üretimi ve tersine mühendislik için Egemen Makine ile iletişime geçin.",
   alternates: {
     canonical: "/contact",
   },
@@ -21,12 +21,12 @@ export default function ContactPage() {
           <div>
             <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">İletişim</p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              Bir sonraki endüstriyel projeniz için mühendislik desteği talep edin.
+              CNC fason veya tersine mühendislik için bize ulaşın.
             </h1>
           </div>
           <p className="text-lg leading-8 text-slate-300">
-            Gereksiniminizi, çizimlerinizi, parça fotoğraflarınızı veya otomasyon hedefinizi paylaşın.
-            Egemen Makine teknik yolu ve sonraki adımları netleştirmenize yardımcı olur.
+            Çiziminizi, parça fotoğrafınızı veya numunenizi paylaşın; fason işleme veya tersine
+            mühendislik için hızlı geri dönüş sağlayalım.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ export default function ContactPage() {
             </div>
 
             <div className="light-panel rounded-[2rem] p-7">
-              <h2 className="text-xl font-black text-slate-950">Faydalı talep bilgileri</h2>
+              <h2 className="text-xl font-black text-slate-950">Teklif için gönderin</h2>
               <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-600">
                 {contactTips.map((tip) => (
                   <li key={tip}>{tip}</li>
@@ -83,7 +83,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="Konum"
             title="Egemen Makine ile ziyaret veya koordinasyon sağlayın."
-            description="Konum bilgisi için haritayı kullanın; üretim veya proje toplantıları için ziyaret öncesi doğrudan iletişime geçin."
+            description="Atölye ziyareti veya numune teslimi için önceden iletişime geçmenizi öneririz."
           />
           <div className="mt-10">
             <GoogleMap />
@@ -95,10 +95,10 @@ export default function ContactPage() {
         <div className="section-shell">
           <div className="rounded-[2.25rem] bg-slate-950 p-7 text-white md:p-10">
             <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
-              Sık talep edilen teklif kapsamları
+              Sık talep edilen hizmetler
             </p>
-            <div className="mt-8 grid gap-3 md:grid-cols-3">
-              {services.map((service) => (
+            <div className="mt-8 grid gap-3 md:grid-cols-2">
+              {primaryServices.map((service) => (
                 <span
                   key={service.slug}
                   className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-bold text-slate-200"
