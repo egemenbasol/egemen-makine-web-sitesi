@@ -1,0 +1,47 @@
+{
+  "name": "egemen-makine-web-sitesi",
+  "version": "1.0.0",
+  "description": "Premium industrial company website for Egemen Makine.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egemenbasol/egemen-makine-web-sitesi.git"
+  },
+  "keywords": [
+    "Egemen Makine",
+    "custom machine design",
+    "reverse engineering",
+    "3D scanning",
+    "CAD CAM",
+    "CNC manufacturing",
+    "industrial automation"
+  ],
+  "author": "Egemen Makine",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/egemenbasol/egemen-makine-web-sitesi/issues"
+  },
+  "homepage": "https://github.com/egemenbasol/egemen-makine-web-sitesi#readme",
+  "dependencies": {
+    "next": "^15.5.19",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^15.5.19",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^6.0.3"
+  }
+}
