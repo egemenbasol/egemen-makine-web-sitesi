@@ -37,7 +37,7 @@ export default function Home() {
               {company.tagline}
             </p>
             <h1 className="mt-6 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              CNC tezgahlarında fason ve özel parça üretimi.
+              Geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
               {company.description}
