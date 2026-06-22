@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     description: company.description,
   },
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
+    icon: [{ url: "/logo.png", type: "image/png" }, { url: "/logo.svg", type: "image/svg+xml" }],
+    apple: "/logo.png",
   },
   twitter: {
     card: "summary_large_image",
