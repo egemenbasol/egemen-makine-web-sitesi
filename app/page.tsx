@@ -2,10 +2,8 @@ import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
-import { ServiceCard } from "@/components/service-card";
 import {
   company,
-  primaryServices,
   processSteps,
   projects,
   secondaryServices,
@@ -106,21 +104,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28">
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="Ana hizmetlerimiz"
-            title="CNC fason üretim ve tersine mühendislikte uzman çözümler."
-            description="Günlük işimiz CNC tezgahlarda parça üretmek ve çizimi olmayan parçaları yeniden üretilebilir hale getirmektir."
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {primaryServices.map((service) => (
-              <ServiceCard key={service.slug} {...service} />
-            ))}
           </div>
         </div>
       </section>

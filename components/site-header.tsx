@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/logo";
-import { company, navItems } from "@/lib/site-data";
+import { navItems } from "@/lib/site-data";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -35,13 +35,7 @@ export function SiteHeader() {
           })}
         </div>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={company.phoneHref}
-            className="text-sm font-semibold text-slate-300 transition hover:text-white"
-          >
-            {company.phone}
-          </a>
+        <div className="hidden items-center lg:flex">
           <Link
             href="/contact"
             className="rounded-full bg-sky-400 px-5 py-3 text-sm font-black text-slate-950 shadow-lg shadow-sky-500/20 transition hover:bg-sky-300"

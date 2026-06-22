@@ -45,9 +45,9 @@ export function SiteFooter() {
             <a href={company.emailHref} className="hover:text-sky-300">
               {company.email}
             </a>
-            <a href={company.phoneHref} className="hover:text-sky-300">
-              {company.phone}
-            </a>
+            <Link href="/contact" className="hover:text-sky-300">
+              İletişim
+            </Link>
           </div>
         </div>
       </div>
