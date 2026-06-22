@@ -15,7 +15,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="flex items-center gap-3"
-          aria-label={`${company.name} home`}
+          aria-label={`${company.name} ana sayfa`}
           onClick={() => setIsOpen(false)}
         >
           <span className="relative grid size-11 place-items-center overflow-hidden rounded-xl border border-sky-300/30 bg-slate-900">
@@ -25,7 +25,7 @@ export function SiteHeader() {
           <span>
             <span className="block text-lg font-black tracking-tight">{company.name}</span>
             <span className="block text-xs uppercase tracking-[0.28em] text-slate-400">
-              Engineering
+              Mühendislik
             </span>
           </span>
         </Link>
@@ -61,14 +61,14 @@ export function SiteHeader() {
             href="/contact"
             className="rounded-full bg-sky-400 px-5 py-3 text-sm font-black text-slate-950 shadow-lg shadow-sky-500/20 transition hover:bg-sky-300"
           >
-            Request a Quote
+            Teklif Alın
           </Link>
         </div>
 
         <button
           type="button"
           className="inline-flex size-11 items-center justify-center rounded-xl border border-white/10 text-white lg:hidden"
-          aria-label="Toggle navigation"
+          aria-label="Menüyü aç veya kapat"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((open) => !open)}
         >
@@ -106,7 +106,7 @@ export function SiteHeader() {
               onClick={() => setIsOpen(false)}
               className="mt-3 rounded-2xl bg-sky-400 px-4 py-3 text-center font-black text-slate-950"
             >
-              Request a Quote
+              Teklif Alın
             </Link>
           </div>
         </div>

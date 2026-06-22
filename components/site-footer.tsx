@@ -14,7 +14,7 @@ export function SiteFooter() {
             <span>
               <span className="block text-xl font-black">{company.name}</span>
               <span className="text-xs uppercase tracking-[0.28em] text-slate-400">
-                Industrial Engineering
+                Endüstriyel Mühendislik
               </span>
             </span>
           </Link>
@@ -22,9 +22,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h2 className="text-sm font-black uppercase tracking-[0.22em] text-slate-300">
-            Navigation
-          </h2>
+          <h2 className="text-sm font-black uppercase tracking-[0.22em] text-slate-300">Menü</h2>
           <ul className="mt-5 space-y-3 text-sm text-slate-400">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -38,7 +36,7 @@ export function SiteFooter() {
 
         <div>
           <h2 className="text-sm font-black uppercase tracking-[0.22em] text-slate-300">
-            Capabilities
+            Yetkinlikler
           </h2>
           <ul className="mt-5 space-y-3 text-sm text-slate-400">
             {services.slice(0, 4).map((service) => (
@@ -50,7 +48,9 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="section-shell flex flex-col gap-3 py-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-          <p>Copyright {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {company.name}. Tüm hakları saklıdır.
+          </p>
           <div className="flex flex-wrap gap-4">
             <a href={company.emailHref} className="hover:text-sky-300">
               {company.email}

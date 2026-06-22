@@ -1,125 +1,186 @@
 export const company = {
   name: "Egemen Makine",
-  legalName: "Egemen Makine Sanayi ve Muhendislik",
-  tagline: "Hassas makine, tersine muhendislik ve endustriyel otomasyon cozumleri",
+  legalName: "Egemen Makine Sanayi ve Mühendislik",
+  tagline: "Hassas makine, tersine mühendislik ve endüstriyel otomasyon çözümleri",
   description:
-    "Egemen Makine; ozel makine tasarimi, tersine muhendislik, 3D tarama, CAD/CAM, CNC imalat ve endustriyel otomasyon alanlarinda uretime hiz, kalite ve guvenilirlik kazandiran muhendislik ortagidir.",
+    "Egemen Makine; özel makine tasarımı, tersine mühendislik, 3D tarama, CAD/CAM, CNC imalat ve endüstriyel otomasyon alanlarında üretime hız, kalite ve güvenilirlik kazandıran mühendislik ortağınızdır.",
   phone: "+90 555 000 00 00",
   phoneHref: "tel:+905550000000",
   email: "info@egemenmakine.com",
   emailHref: "mailto:info@egemenmakine.com",
-  address: "Organize Sanayi Bolgesi, Istanbul, Turkiye",
-  whatsapp: "https://wa.me/905550000000?text=Merhaba%20Egemen%20Makine%2C%20projem%20hakkinda%20bilgi%20almak%20istiyorum.",
+  address: "Organize Sanayi Bölgesi, İstanbul, Türkiye",
+  whatsapp:
+    "https://wa.me/905550000000?text=Merhaba%20Egemen%20Makine%2C%20projem%20hakkında%20bilgi%20almak%20istiyorum.",
   mapEmbed:
     "https://www.google.com/maps?q=Istanbul%20Organize%20Sanayi%20Bolgesi&output=embed",
 };
 
 export const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Ana Sayfa", href: "/" },
+  { label: "Hizmetler", href: "/services" },
+  { label: "Projeler", href: "/projects" },
+  { label: "Hakkımızda", href: "/about" },
+  { label: "İletişim", href: "/contact" },
 ];
 
 export const services = [
   {
-    title: "Custom machine design",
-    slug: "custom-machine-design",
+    title: "Özel makine tasarımı",
+    slug: "ozel-makine-tasarimi",
     summary:
-      "Purpose-built machines engineered around production targets, safety needs and maintainability.",
+      "Üretim hedefleri, güvenlik gereksinimleri ve bakım kolaylığına göre tasarlanan özel makineler.",
     details:
-      "From concept sketches to commissioning-ready mechanical assemblies, we design robust systems that fit your process instead of forcing your process to fit the machine.",
-    metrics: "Concept to detailed design",
+      "Konsept eskizlerinden devreye almaya hazır mekanik montajlara kadar, sürecinizi makineye uydurmak yerine sürecinize uygun sağlam sistemler tasarlıyoruz.",
+    metrics: "Konseptten detay tasarıma",
   },
   {
-    title: "Reverse engineering",
-    slug: "reverse-engineering",
+    title: "Tersine mühendislik",
+    slug: "tersine-muhendislik",
     summary:
-      "Accurate recreation and improvement of legacy components, fixtures and machine assemblies.",
+      "Eski parçaların, fikstürlerin ve makine montajlarının doğru şekilde yeniden üretilmesi ve iyileştirilmesi.",
     details:
-      "We capture geometry, evaluate wear points and rebuild manufacturable CAD data for parts where documentation is missing or outdated.",
-    metrics: "Legacy part recovery",
+      "Geometriyi ölçüyor, aşınma noktalarını değerlendiriyor ve dokümantasyonu eksik veya güncel olmayan parçalar için üretilebilir CAD verisi oluşturuyoruz.",
+    metrics: "Eski parça kurtarma",
   },
   {
-    title: "3D scanning",
-    slug: "3d-scanning",
+    title: "3D tarama",
+    slug: "3d-tarama",
     summary:
-      "High-resolution digital capture for inspection, redesign, quality control and documentation.",
+      "Muayene, yeniden tasarım, kalite kontrolü ve dokümantasyon için yüksek çözünürlüklü dijital ölçüm.",
     details:
-      "Our scan-to-CAD workflow helps compare real-world parts with nominal designs and accelerates engineering decisions.",
-    metrics: "Scan-to-CAD workflow",
+      "Taramadan CAD'e iş akışımız, gerçek parçaları nominal tasarımlarla karşılaştırmanıza ve mühendislik kararlarını hızlandırmanıza yardımcı olur.",
+    metrics: "Taramadan CAD'e",
   },
   {
-    title: "CAD/CAM engineering",
-    slug: "cad-cam-engineering",
+    title: "CAD/CAM mühendisliği",
+    slug: "cad-cam-muhendisligi",
     summary:
-      "Production-ready modeling, assemblies, drawings, toolpaths and machining preparation.",
+      "Üretime hazır modelleme, montajlar, teknik çizimler, takım yolları ve işleme hazırlığı.",
     details:
-      "We turn engineering intent into clear manufacturing packages with attention to tolerances, material behavior and cycle efficiency.",
-    metrics: "Manufacturing-ready data",
+      "Mühendislik niyetini toleranslar, malzeme davranışı ve çevrim verimliliği dikkate alınarak net üretim paketlerine dönüştürüyoruz.",
+    metrics: "Üretime hazır veri",
   },
   {
-    title: "CNC manufacturing",
-    slug: "cnc-manufacturing",
+    title: "CNC imalat",
+    slug: "cnc-imalat",
     summary:
-      "Precision machining for prototypes, fixtures, spare parts and repeatable production components.",
+      "Prototipler, fikstürler, yedek parçalar ve tekrarlanabilir üretim bileşenleri için hassas işleme.",
     details:
-      "Our CNC manufacturing approach emphasizes stable processes, traceable quality checks and consistent delivery.",
-    metrics: "Precision machining",
+      "CNC imalat yaklaşımımız istikrarlı süreçler, izlenebilir kalite kontrolleri ve tutarlı teslimat üzerine kuruludur.",
+    metrics: "Hassas işleme",
   },
   {
-    title: "Industrial automation",
-    slug: "industrial-automation",
+    title: "Endüstriyel otomasyon",
+    slug: "endustriyel-otomasyon",
     summary:
-      "Automation cells, control logic and integration support for safer, faster production lines.",
+      "Daha güvenli ve hızlı üretim hatları için otomasyon hücreleri, kontrol mantığı ve entegrasyon desteği.",
     details:
-      "We connect mechanical design, sensors, control panels and production workflows into practical automation systems.",
-    metrics: "Integrated control systems",
+      "Mekanik tasarım, sensörler, kontrol panelleri ve üretim iş akışlarını pratik otomasyon sistemlerinde bir araya getiriyoruz.",
+    metrics: "Entegre kontrol sistemleri",
   },
 ];
 
 export const projects = [
   {
-    title: "Robotic transfer and fixture cell",
-    sector: "Automotive supplier",
+    title: "Robotik transfer ve fikstür hücresi",
+    sector: "Otomotiv tedarikçisi",
     summary:
-      "A compact automation cell with custom fixtures, pneumatic handling and operator-safe access zones.",
-    tags: ["Automation", "Fixture design", "Safety"],
+      "Özel fikstürler, pnömatik taşıma ve operatör güvenliği için erişim bölgeleri içeren kompakt bir otomasyon hücresi.",
+    tags: ["Otomasyon", "Fikstür tasarımı", "Güvenlik"],
   },
   {
-    title: "Legacy gearbox reverse engineering",
-    sector: "Heavy industry",
+    title: "Eski şanzıman tersine mühendisliği",
+    sector: "Ağır sanayi",
     summary:
-      "3D scan, measurement validation and manufacturable CAD rebuild for a critical discontinued gearbox housing.",
-    tags: ["Reverse engineering", "3D scanning", "CNC"],
+      "Üretimi durdurulmuş kritik bir şanzıman gövdesi için 3D tarama, ölçüm doğrulaması ve üretilebilir CAD yeniden oluşturma.",
+    tags: ["Tersine mühendislik", "3D tarama", "CNC"],
   },
   {
-    title: "High-precision CNC production fixture",
-    sector: "Aerospace machining",
+    title: "Yüksek hassasiyetli CNC üretim fikstürü",
+    sector: "Havacılık işleme",
     summary:
-      "Modular fixture architecture that reduced setup variation and improved repeatability across production batches.",
-    tags: ["CAD/CAM", "CNC manufacturing", "Quality"],
+      "Kurulum farklılıklarını azaltan ve üretim partileri arasında tekrarlanabilirliği artıran modüler fikstür mimarisi.",
+    tags: ["CAD/CAM", "CNC imalat", "Kalite"],
   },
   {
-    title: "Packaging line upgrade",
-    sector: "Food production",
+    title: "Ambalaj hattı modernizasyonu",
+    sector: "Gıda üretimi",
     summary:
-      "Mechanical redesign and sensor integration to increase throughput while preserving hygiene and maintenance access.",
-    tags: ["Machine design", "Automation", "Commissioning"],
+      "Hijyen ve bakım erişimini koruyarak verimi artırmak için mekanik yeniden tasarım ve sensör entegrasyonu.",
+    tags: ["Makine tasarımı", "Otomasyon", "Devreye alma"],
   },
 ];
 
 export const processSteps = [
-  "Discovery and technical assessment",
-  "Concept engineering and risk review",
-  "CAD/CAM development and prototyping",
-  "Manufacturing, assembly and validation",
-  "Commissioning support and continuous improvement",
+  {
+    title: "Keşif ve teknik değerlendirme",
+    detail:
+      "Kilometre taşları dokümante edilir; mekanik, imalat ve otomasyon kararları hedef sonuçla uyumlu kalır.",
+  },
+  {
+    title: "Konsept mühendisliği ve risk analizi",
+    detail:
+      "Teknik riskler erken aşamada belirlenir ve proje kapsamı netleştirilir.",
+  },
+  {
+    title: "CAD/CAM geliştirme ve prototipleme",
+    detail:
+      "Dijital modeller ve prototiplerle tasarım doğrulanır, üretim öncesi revizyonlar tamamlanır.",
+  },
+  {
+    title: "İmalat, montaj ve doğrulama",
+    detail:
+      "Parçalar üretilir, montaj yapılır ve kalite kontrolleriyle performans doğrulanır.",
+  },
+  {
+    title: "Devreye alma desteği ve sürekli iyileştirme",
+    detail:
+      "Sahada devreye alma sonrası destek ve üretim verimliliğini artıran iyileştirmeler sağlanır.",
+  },
 ];
 
 export const stats = [
-  { value: "6", label: "Core engineering services" },
-  { value: "360", label: "End-to-end project perspective" },
-  { value: "24/7", label: "Production-minded support" },
+  { value: "6", label: "Temel mühendislik hizmeti" },
+  { value: "360°", label: "Uçtan uca proje bakışı" },
+  { value: "7/24", label: "Üretim odaklı destek" },
+];
+
+export const serviceDeliverables = [
+  "Mühendislik incelemesi",
+  "Üretim verisi",
+  "Kalite doğrulaması",
+];
+
+export const servicePrinciples = [
+  "Mekanik tasarım kararları üretilebilirlik ve servis edilebilirlik açısından değerlendirilir.",
+  "Dijital mühendislik verisi gerçek üretim ortamları için hazırlanır, yalnızca sunum için değil.",
+  "Otomasyon konseptleri operatör güvenliği, çalışma süresi ve uzun vadeli bakım kolaylığını önceler.",
+];
+
+export const projectMetrics = [
+  { value: "Tasarım", label: "Mekanik konseptler, modeller ve üretim paketleri" },
+  { value: "İmalat", label: "CNC işleme, montaj, muayene ve iterasyon" },
+  { value: "Entegrasyon", label: "Otomasyon, kontrol ve devreye alma desteği" },
+];
+
+export const principles = [
+  {
+    title: "Üretim öncelikli yaklaşım",
+    text: "Mühendislik kararları gerçek üretim kısıtları, bakım erişimi ve operatör iş akışına göre test edilir.",
+  },
+  {
+    title: "Dijital doğruluk",
+    text: "CAD/CAM ve 3D tarama iş akışları yeniden tasarım, muayene ve imalat için güvenilir teknik temel sağlar.",
+  },
+  {
+    title: "Kalıcı uygulama",
+    text: "Tasarım, işleme ve otomasyon çalışmaları uzun hizmet ömrü ve tekrarlanabilir endüstriyel performans için planlanır.",
+  },
+];
+
+export const contactTips = [
+  "Varsa teknik çizimler veya CAD dosyaları",
+  "Parça fotoğrafları, ölçüler veya 3D tarama gereksinimleri",
+  "Malzeme, tolerans, adet ve üretim hedefleri",
+  "Otomasyon çevrim süresi, güvenlik ve entegrasyon ihtiyaçları",
 ];

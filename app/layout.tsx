@@ -10,18 +10,18 @@ const siteUrl = "https://egemenmakine.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${company.name} | Premium Industrial Engineering`,
+    default: `${company.name} | Premium Endüstriyel Mühendislik`,
     template: `%s | ${company.name}`,
   },
   description: company.description,
   keywords: [
     "Egemen Makine",
-    "custom machine design",
-    "reverse engineering",
-    "3D scanning",
-    "CAD/CAM engineering",
-    "CNC manufacturing",
-    "industrial automation",
+    "özel makine tasarımı",
+    "tersine mühendislik",
+    "3D tarama",
+    "CAD CAM mühendisliği",
+    "CNC imalat",
+    "endüstriyel otomasyon",
   ],
   authors: [{ name: company.name }],
   creator: company.name,
@@ -31,15 +31,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "tr_TR",
     url: siteUrl,
     siteName: company.name,
-    title: `${company.name} | Premium Industrial Engineering`,
+    title: `${company.name} | Premium Endüstriyel Mühendislik`,
     description: company.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${company.name} | Premium Industrial Engineering`,
+    title: `${company.name} | Premium Endüstriyel Mühendislik`,
     description: company.description,
   },
   robots: {
@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body>
         <SiteHeader />
         <main>{children}</main>

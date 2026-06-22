@@ -30,10 +30,10 @@ export default function Home() {
         <div className="section-shell relative z-10 grid min-h-[calc(100vh-5rem)] gap-12 py-20 lg:grid-cols-[1.06fr_0.94fr] lg:items-center">
           <div className="animate-fade-up">
             <p className="inline-flex rounded-full border border-sky-300/30 bg-sky-300/10 px-4 py-2 text-sm font-black uppercase tracking-[0.24em] text-sky-200">
-              Premium industrial engineering
+              Premium endüstriyel mühendislik
             </p>
             <h1 className="mt-6 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              Precision machines and automation for demanding production lines.
+              Zorlu üretim hatları için hassas makineler ve otomasyon.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
               {company.description}
@@ -43,13 +43,13 @@ export default function Home() {
                 href="/contact"
                 className="rounded-full bg-sky-400 px-7 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-300"
               >
-                Request a Quote
+                Teklif Alın
               </Link>
               <Link
                 href="/projects"
                 className="rounded-full border border-white/15 bg-white/10 px-7 py-4 text-center text-sm font-black text-white transition hover:bg-white hover:text-slate-950"
               >
-                View Projects
+                Projeleri İncele
               </Link>
             </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
                 <div className="relative z-10 flex h-full min-h-[466px] flex-col justify-between">
                   <div className="flex justify-between gap-4">
                     <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-sky-100">
-                      CNC / CAD / Automation
+                      CNC / CAD / Otomasyon
                     </span>
                     <span className="grid size-14 place-items-center rounded-2xl bg-white/10">
                       <span className="gear-mark size-10 rounded-full" />
@@ -90,10 +90,10 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm uppercase tracking-[0.26em] text-slate-300">
-                      Production-ready systems
+                      Üretime hazır sistemler
                     </p>
                     <h2 className="mt-3 max-w-md text-4xl font-black tracking-tight text-white">
-                      Design. Validate. Manufacture. Automate.
+                      Tasarla. Doğrula. Üret. Otomatize Et.
                     </h2>
                   </div>
                 </div>
@@ -106,9 +106,9 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Capabilities"
-            title="Engineering services built around industrial performance."
-            description="Egemen Makine combines field experience, digital engineering and precision manufacturing to solve production challenges from concept to commissioning."
+            eyebrow="Yetkinlikler"
+            title="Endüstriyel performansa odaklanan mühendislik hizmetleri."
+            description="Egemen Makine; saha deneyimi, dijital mühendislik ve hassas imalatı bir araya getirerek konseptten devreye almaya kadar üretim zorluklarını çözer."
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
@@ -122,15 +122,15 @@ export default function Home() {
         <div className="section-shell">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
-              eyebrow="Selected projects"
-              title="Industrial solutions with measurable production value."
-              description="A representative showcase of machine design, reverse engineering, CNC and automation work."
+              eyebrow="Seçilmiş projeler"
+              title="Ölçülebilir üretim değeri sunan endüstriyel çözümler."
+              description="Makine tasarımı, tersine mühendislik, CNC ve otomasyon çalışmalarından örnek bir vitrin."
             />
             <Link
               href="/projects"
               className="w-fit rounded-full bg-slate-950 px-6 py-3 text-sm font-black text-white transition hover:bg-slate-800"
             >
-              See all projects
+              Tüm projeleri gör
             </Link>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -144,22 +144,19 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="section-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
-            eyebrow="Process"
-            title="A clear engineering path from requirement to reliable output."
-            description="Every project is managed around practical deliverables, technical transparency and production constraints."
+            eyebrow="Süreç"
+            title="Gereksinimden güvenilir çıktıya net bir mühendislik yolu."
+            description="Her proje pratik teslimatlar, teknik şeffaflık ve üretim kısıtları etrafında yönetilir."
           />
           <div className="space-y-4">
             {processSteps.map((step, index) => (
-              <div key={step} className="light-panel flex gap-5 rounded-3xl p-5">
+              <div key={step.title} className="light-panel flex gap-5 rounded-3xl p-5">
                 <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-sky-300">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="text-lg font-black text-slate-950">{step}</h3>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">
-                    Milestones are documented so mechanical, manufacturing and automation decisions
-                    stay aligned with your target outcome.
-                  </p>
+                  <h3 className="text-lg font-black text-slate-950">{step.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{step.detail}</p>
                 </div>
               </div>
             ))}

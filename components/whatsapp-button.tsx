@@ -7,7 +7,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-3 rounded-full bg-emerald-500 px-5 py-3 text-sm font-black text-white shadow-2xl shadow-emerald-900/30 transition hover:-translate-y-1 hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-300/40"
-      aria-label="Contact Egemen Makine on WhatsApp"
+      aria-label="Egemen Makine ile WhatsApp üzerinden iletişime geçin"
     >
       <span className="grid size-7 place-items-center rounded-full bg-white/18">
         <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4 fill-current">

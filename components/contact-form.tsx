@@ -18,26 +18,26 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="light-panel rounded-[2rem] p-6 md:p-8">
       <div className="grid gap-5 md:grid-cols-2">
         <label className="space-y-2 text-sm font-bold text-slate-700">
-          Full name
+          Ad Soyad
           <input
             name="name"
             required
             autoComplete="name"
             className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-            placeholder="Your name"
+            placeholder="Adınız ve soyadınız"
           />
         </label>
         <label className="space-y-2 text-sm font-bold text-slate-700">
-          Company
+          Firma
           <input
             name="company"
             autoComplete="organization"
             className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-            placeholder="Company name"
+            placeholder="Firma adı"
           />
         </label>
         <label className="space-y-2 text-sm font-bold text-slate-700">
-          Email
+          E-posta
           <input
             name="email"
             type="email"
@@ -48,7 +48,7 @@ export function ContactForm() {
           />
         </label>
         <label className="space-y-2 text-sm font-bold text-slate-700">
-          Phone
+          Telefon
           <input
             name="phone"
             type="tel"
@@ -60,13 +60,13 @@ export function ContactForm() {
       </div>
 
       <label className="mt-5 block space-y-2 text-sm font-bold text-slate-700">
-        Project details
+        Proje detayları
         <textarea
           name="message"
           required
           rows={6}
           className="w-full resize-y rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
-          placeholder="Tell us about your machine, part, automation cell or manufacturing requirement."
+          placeholder="Makine, parça, otomasyon hücresi veya imalat gereksiniminizi kısaca anlatın."
         />
       </label>
 
@@ -75,10 +75,10 @@ export function ContactForm() {
           type="submit"
           className="rounded-full bg-slate-950 px-7 py-4 text-sm font-black text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-slate-800"
         >
-          Send request
+          Talebi Gönder
         </button>
         <p className="text-sm text-slate-500">
-          Prefer email?{" "}
+          E-posta tercih ediyorsanız{" "}
           <a href={company.emailHref} className="font-bold text-sky-700 hover:text-sky-900">
             {company.email}
           </a>
@@ -87,8 +87,8 @@ export function ContactForm() {
 
       {state === "sent" ? (
         <p className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800">
-          Thank you. Your request is ready for review; please email or WhatsApp for immediate
-          production support.
+          Teşekkürler. Talebiniz incelenmeye hazır; acil üretim desteği için e-posta veya WhatsApp
+          üzerinden iletişime geçebilirsiniz.
         </p>
       ) : null}
     </form>

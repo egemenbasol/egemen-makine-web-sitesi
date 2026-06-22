@@ -26,8 +26,8 @@ export function ServiceCard({ title, summary, metrics, href = "/services" }: Ser
         href={href}
         className="mt-6 inline-flex items-center gap-2 text-sm font-black text-sky-700 transition group-hover:gap-3 group-hover:text-sky-900"
       >
-        Explore capability
-        <span aria-hidden="true">-&gt;</span>
+        Yetkinliği incele
+        <span aria-hidden="true">→</span>
       </Link>
     </article>
   );
