@@ -78,37 +78,6 @@ export const services = [
   },
 ];
 
-export const projects = [
-  {
-    title: "Seri fason CNC parça üretimi",
-    sector: "Makine imalat",
-    summary:
-      "Teknik çizimle gelen çelik ve alüminyum bileşenlerin CNC işleme merkezinde seri fason üretimi ve kalite kontrollü teslimatı.",
-    tags: ["CNC fason", "Seri üretim", "Kalite kontrol"],
-  },
-  {
-    title: "Eski şanzıman gövdesi tersine mühendislik",
-    sector: "Ağır sanayi",
-    summary:
-      "Üretimi durmuş kritik bir şanzıman gövdesinin ölçülmesi, CAD modelinin oluşturulması ve CNC ile yeniden üretilmesi.",
-    tags: ["Tersine mühendislik", "3D tarama", "CNC"],
-  },
-  {
-    title: "Yüksek hassasiyetli işleme fikstürü",
-    sector: "Havacılık tedarikçisi",
-    summary:
-      "Tekrarlayan CNC işlemlerinde kurulum süresini azaltan ve toleransı koruyan özel fikstürün tasarımı ve üretimi.",
-    tags: ["CAD/CAM", "CNC imalat", "Fikstür"],
-  },
-  {
-    title: "Çizimsiz yedek parça üretimi",
-    sector: "Gıda makineleri",
-    summary:
-      "Orijinal çizimi bulunmayan aşınmış parçanın ölçülerek modelenmesi ve CNC ile yeniden imal edilmesi.",
-    tags: ["Tersine mühendislik", "Yedek parça", "CNC"],
-  },
-];
-
 export const processSteps = [
   {
     title: "Teknik inceleme ve ölçüm",

@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import { WhatsAppButton } from "@/components/whatsapp-button";
 import { company } from "@/lib/site-data";
 
 const siteUrl = "https://egemenmakine.com.tr";
@@ -62,12 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body>
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
-        <WhatsAppButton />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

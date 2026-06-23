@@ -2,14 +2,13 @@ import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
-import {
-  company,
-  processSteps,
-  projects,
-  stats,
-} from "@/lib/site-data";
+import { loadPublishedProjects } from "@/lib/content-store";
+import { company, processSteps, stats } from "@/lib/site-data";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const projects = await loadPublishedProjects();
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -124,7 +123,7 @@ export default function Home() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {projects.slice(0, 4).map((project, index) => (
-              <ProjectCard key={project.title} {...project} index={index} />
+              <ProjectCard key={project.id} {...project} index={index} />
             ))}
           </div>
         </div>

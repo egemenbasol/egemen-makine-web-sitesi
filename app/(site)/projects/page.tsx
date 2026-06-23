@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { CtaSection } from "@/components/cta-section";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
-import { projectMetrics, projects } from "@/lib/site-data";
+import { loadPublishedProjects } from "@/lib/content-store";
+import { projectMetrics } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Projeler",
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ProjectsPage() {
+export const dynamic = "force-dynamic";
+
+export default async function ProjectsPage() {
+  const projects = await loadPublishedProjects();
   return (
     <>
       <section className="industrial-bg py-24 text-white md:py-32">
@@ -41,7 +45,7 @@ export default function ProjectsPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {projects.map((project, index) => (
-              <ProjectCard key={project.title} {...project} index={index} />
+              <ProjectCard key={project.id} {...project} index={index} />
             ))}
           </div>
         </div>

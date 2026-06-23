@@ -3,24 +3,46 @@ type ProjectCardProps = {
   sector: string;
   summary: string;
   tags: string[];
+  image?: string;
   index?: number;
 };
 
-export function ProjectCard({ title, sector, summary, tags, index = 0 }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  sector,
+  summary,
+  tags,
+  image,
+  index = 0,
+}: ProjectCardProps) {
   return (
     <article className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl shadow-slate-950/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-950/10">
       <div className="machine-card relative h-56 overflow-hidden p-6 text-white">
-        <div className="absolute inset-x-8 top-10 h-20 rounded-full border border-sky-300/20" />
-        <div className="absolute -right-14 -top-14 size-44 rounded-full border border-slate-300/20" />
-        <div className="absolute bottom-5 left-6 right-6 grid grid-cols-5 gap-2">
-          {Array.from({ length: 10 }).map((_, itemIndex) => (
-            <span
-              key={itemIndex}
-              className="h-2 rounded-full bg-slate-300/30"
-              style={{ opacity: 0.3 + ((itemIndex + index) % 4) * 0.14 }}
+        {image ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={image}
+              alt={title}
+              className="absolute inset-0 size-full object-cover"
             />
-          ))}
-        </div>
+            <div className="absolute inset-0 bg-slate-950/55" />
+          </>
+        ) : (
+          <>
+            <div className="absolute inset-x-8 top-10 h-20 rounded-full border border-sky-300/20" />
+            <div className="absolute -right-14 -top-14 size-44 rounded-full border border-slate-300/20" />
+            <div className="absolute bottom-5 left-6 right-6 grid grid-cols-5 gap-2">
+              {Array.from({ length: 10 }).map((_, itemIndex) => (
+                <span
+                  key={itemIndex}
+                  className="h-2 rounded-full bg-slate-300/30"
+                  style={{ opacity: 0.3 + ((itemIndex + index) % 4) * 0.14 }}
+                />
+              ))}
+            </div>
+          </>
+        )}
         <div className="relative z-10 flex h-full flex-col justify-between">
           <span className="w-fit rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.22em] text-sky-100">
             {sector}
