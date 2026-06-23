@@ -1,11 +1,16 @@
 import { cookies } from "next/headers";
+import { normalizeEnvValue } from "@/lib/env-utils";
 
 const SESSION_COOKIE = "admin_session";
 const SESSION_MAX_AGE = 60 * 60 * 24 * 7;
 const encoder = new TextEncoder();
 
 function getAdminSecret(): string {
-  return process.env.ADMIN_SECRET ?? process.env.ADMIN_PASSWORD ?? "egemen-makine-admin";
+  return (
+    normalizeEnvValue(process.env.ADMIN_SECRET) ||
+    normalizeEnvValue(process.env.ADMIN_PASSWORD) ||
+    "egemen-makine-admin"
+  );
 }
 
 async function importSigningKey() {
@@ -71,14 +76,18 @@ export async function verifyAdminSessionToken(token: string | undefined): Promis
   return Number.isFinite(expiresAt) && expiresAt > Date.now();
 }
 
+export function getAdminPassword(): string {
+  return normalizeEnvValue(process.env.ADMIN_PASSWORD);
+}
+
 export function isAdminPasswordValid(password: string): boolean {
-  const configuredPassword = process.env.ADMIN_PASSWORD?.trim();
+  const configuredPassword = getAdminPassword();
 
   if (!configuredPassword) {
     return false;
   }
 
-  return safeCompare(password.trim(), configuredPassword);
+  return safeCompare(normalizeEnvValue(password), configuredPassword);
 }
 
 export async function setAdminSessionCookie(): Promise<void> {

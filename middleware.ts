@@ -4,7 +4,7 @@ import { SESSION_COOKIE, verifyAdminSessionToken } from "@/lib/admin-auth";
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (pathname === "/admin/login" || pathname === "/api/admin/login") {
+  if (pathname === "/admin/login" || pathname === "/api/admin/login" || pathname === "/api/admin/setup-status") {
     return NextResponse.next();
   }
 

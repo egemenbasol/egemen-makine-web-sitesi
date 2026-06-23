@@ -1,7 +1,14 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+
+type SetupStatus = {
+  passwordConfigured: boolean;
+  passwordLength: number;
+  projectRoot: string;
+  message: string;
+};
 
 export default function AdminLoginForm() {
   const router = useRouter();
@@ -9,6 +16,22 @@ export default function AdminLoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [setupStatus, setSetupStatus] = useState<SetupStatus | null>(null);
+
+  useEffect(() => {
+    async function loadSetupStatus() {
+      const response = await fetch("/api/admin/setup-status");
+
+      if (!response.ok) {
+        return;
+      }
+
+      const data = (await response.json()) as SetupStatus;
+      setSetupStatus(data);
+    }
+
+    void loadSetupStatus();
+  }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -43,6 +66,18 @@ export default function AdminLoginForm() {
       <p className="mt-3 text-sm leading-7 text-slate-600">
         Projeleri buradan ekleyebilir, düzenleyebilir veya silebilirsiniz.
       </p>
+
+      {setupStatus ? (
+        <p
+          className={`mt-4 rounded-2xl px-4 py-3 text-sm ${
+            setupStatus.passwordConfigured
+              ? "bg-sky-50 text-sky-800"
+              : "bg-amber-50 text-amber-800"
+          }`}
+        >
+          {setupStatus.message}
+        </p>
+      ) : null}
 
       <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
         <label className="block">
