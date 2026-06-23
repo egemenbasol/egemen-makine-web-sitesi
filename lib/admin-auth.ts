@@ -72,13 +72,13 @@ export async function verifyAdminSessionToken(token: string | undefined): Promis
 }
 
 export function isAdminPasswordValid(password: string): boolean {
-  const configuredPassword = process.env.ADMIN_PASSWORD;
+  const configuredPassword = process.env.ADMIN_PASSWORD?.trim();
 
   if (!configuredPassword) {
     return false;
   }
 
-  return safeCompare(password, configuredPassword);
+  return safeCompare(password.trim(), configuredPassword);
 }
 
 export async function setAdminSessionCookie(): Promise<void> {
