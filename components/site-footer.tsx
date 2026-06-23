@@ -1,13 +1,19 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { company, navItems, services } from "@/lib/site-data";
+import { navItems } from "@/lib/site-data";
+import type { Company, Service } from "@/lib/site-types";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  company: Company;
+  services: Service[];
+};
+
+export function SiteFooter({ company, services }: SiteFooterProps) {
   return (
     <footer className="bg-slate-950 text-white">
       <div className="section-shell grid gap-10 py-14 md:grid-cols-[1.3fr_0.7fr_0.8fr]">
         <div>
-          <Logo subtitle={company.tagline} size={48} className="text-white" />
+          <Logo subtitle={company.tagline} companyName={company.name} size={48} className="text-white" />
           <p className="mt-5 max-w-lg text-sm leading-7 text-slate-400">{company.description}</p>
         </div>
 

@@ -2,38 +2,46 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { GoogleMap } from "@/components/google-map";
 import { SectionHeading } from "@/components/section-heading";
-import { company, contactTips, services } from "@/lib/site-data";
+import { loadPublishedServices } from "@/lib/services-store";
+import { loadSiteContent } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "İletişim",
-  description:
-    "CNC fason işleme, özel parça üretimi ve tersine mühendislik için Egemen Makine ile iletişime geçin.",
-  alternates: {
-    canonical: "/contact",
-  },
-};
+export const dynamic = "force-dynamic";
 
-export default function ContactPage() {
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await loadSiteContent();
+
+  return {
+    title: "İletişim",
+    description: site.contactPage.metaDescription,
+    alternates: {
+      canonical: "/contact",
+    },
+  };
+}
+
+export default async function ContactPage() {
+  const [site, services] = await Promise.all([loadSiteContent(), loadPublishedServices()]);
+  const { company, contactPage, contactTips } = site;
+
   return (
     <>
       <section className="industrial-bg py-24 text-white md:py-32">
         <div className="section-shell relative z-10 grid gap-10 lg:grid-cols-[1fr_0.75fr] lg:items-end">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">İletişim</p>
+            <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
+              {contactPage.heroEyebrow}
+            </p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              CNC fason veya tersine mühendislik için bize ulaşın.
+              {contactPage.heroTitle}
             </h1>
           </div>
-          <p className="text-lg leading-8 text-slate-300">
-            Çiziminizi, parça fotoğrafınızı veya numunenizi paylaşın; fason işleme veya tersine
-            mühendislik için hızlı geri dönüş sağlayalım.
-          </p>
+          <p className="text-lg leading-8 text-slate-300">{contactPage.heroDescription}</p>
         </div>
       </section>
 
       <section className="py-20 md:py-28">
         <div className="section-shell grid gap-10 lg:grid-cols-[1fr_0.78fr] lg:items-start">
-          <ContactForm />
+          <ContactForm company={company} />
 
           <aside className="space-y-5">
             <div className="rounded-[2rem] bg-slate-950 p-7 text-white shadow-2xl shadow-slate-950/15">
@@ -81,12 +89,12 @@ export default function ContactPage() {
       <section className="bg-slate-100 py-20">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Konum"
-            title="Egemen Makine ile ziyaret veya koordinasyon sağlayın."
-            description="Atölye ziyareti veya numune teslimi için önceden iletişime geçmenizi öneririz."
+            eyebrow={contactPage.mapSection.eyebrow}
+            title={contactPage.mapSection.title}
+            description={contactPage.mapSection.description}
           />
           <div className="mt-10">
-            <GoogleMap />
+            <GoogleMap company={company} />
           </div>
         </div>
       </section>
@@ -95,7 +103,7 @@ export default function ContactPage() {
         <div className="section-shell">
           <div className="rounded-[2.25rem] bg-slate-950 p-7 text-white md:p-10">
             <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
-              Sık talep edilen hizmetler
+              {contactPage.servicesListTitle}
             </p>
             <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (

@@ -1,11 +1,15 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { company } from "@/lib/site-data";
+import type { Company } from "@/lib/site-types";
 
 type FormState = "idle" | "sent";
 
-export function ContactForm() {
+type ContactFormProps = {
+  company: Company;
+};
+
+export function ContactForm({ company }: ContactFormProps) {
   const [state, setState] = useState<FormState>("idle");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {

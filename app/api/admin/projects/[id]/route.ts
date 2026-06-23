@@ -3,6 +3,11 @@ import { NextResponse } from "next/server";
 import { deleteProject, updateProject } from "@/lib/content-store";
 import type { ProjectInput } from "@/lib/projects";
 
+function revalidateProjectPaths() {
+  revalidatePath("/");
+  revalidatePath("/projects");
+}
+
 type RouteContext = {
   params: Promise<{ id: string }>;
 };
@@ -13,8 +18,7 @@ export async function PUT(request: Request, context: RouteContext) {
     const body = (await request.json()) as ProjectInput;
     const project = await updateProject(id, body);
 
-    revalidatePath("/");
-    revalidatePath("/projects");
+    revalidateProjectPaths();
 
     return NextResponse.json({
       project,
@@ -31,8 +35,7 @@ export async function DELETE(_request: Request, context: RouteContext) {
     const { id } = await context.params;
     await deleteProject(id);
 
-    revalidatePath("/");
-    revalidatePath("/projects");
+    revalidateProjectPaths();
 
     return NextResponse.json({ message: "Proje silindi." });
   } catch (error) {

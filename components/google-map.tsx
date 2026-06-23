@@ -1,25 +1,31 @@
-import { company } from "@/lib/site-data";
+import type { Company } from "@/lib/site-types";
 
-export function GoogleMap() {
+type GoogleMapProps = {
+  company: Company;
+};
+
+export function GoogleMap({ company }: GoogleMapProps) {
   return (
-    <div className="space-y-4">
-      <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-2xl shadow-slate-950/10">
+    <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl shadow-slate-950/5">
+      <div className="aspect-[16/9] w-full">
         <iframe
           title={`${company.name} konum haritası`}
           src={company.mapEmbed}
-          className="h-[380px] w-full"
+          className="size-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
-      <a
-        href={company.mapLink}
-        target="_blank"
-        rel="noreferrer"
-        className="inline-flex rounded-full bg-slate-950 px-6 py-3 text-sm font-black text-white transition hover:bg-slate-800"
-      >
-        Google Haritalarda Aç
-      </a>
+      <div className="border-t border-slate-200 px-6 py-4">
+        <a
+          href={company.mapLink}
+          target="_blank"
+          rel="noreferrer"
+          className="text-sm font-bold text-sky-700 transition hover:text-sky-900"
+        >
+          Haritada aç
+        </a>
+      </div>
     </div>
   );
 }

@@ -1,25 +1,36 @@
 import type { Metadata } from "next";
 import { CtaSection } from "@/components/cta-section";
 import { SectionHeading } from "@/components/section-heading";
-import { company, serviceDeliverables, servicePrinciples, services } from "@/lib/site-data";
+import { loadPublishedServices } from "@/lib/services-store";
+import { loadSiteContent } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "Hizmetler",
-  description:
-    "Egemen Makine CNC metal işleme, fason üretim, tersine mühendislik, PLC programlama, otomasyon, üretim hattı, 3D tarama ve CAD/CAM hizmetleri.",
-  alternates: {
-    canonical: "/services",
-  },
-};
+export const dynamic = "force-dynamic";
 
-export default function ServicesPage() {
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await loadSiteContent();
+
+  return {
+    title: "Hizmetler",
+    description: site.servicesPage.metaDescription,
+    alternates: {
+      canonical: "/services",
+    },
+  };
+}
+
+export default async function ServicesPage() {
+  const [site, services] = await Promise.all([loadSiteContent(), loadPublishedServices()]);
+  const { company, servicesPage, serviceDeliverables, servicePrinciples, cta } = site;
+
   return (
     <>
       <section className="industrial-bg py-24 text-white md:py-32">
         <div className="section-shell relative z-10">
-          <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">Hizmetler</p>
+          <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
+            {servicesPage.heroEyebrow}
+          </p>
           <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-            CNC metal işleme, otomasyon ve mühendislik hizmetlerimiz.
+            {servicesPage.heroTitle}
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{company.description}</p>
         </div>
@@ -28,9 +39,9 @@ export default function ServicesPage() {
       <section className="py-20 md:py-28">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Hizmetlerimiz"
-            title="Altı hizmet, tek üretim disiplini."
-            description="CNC metal işlemeden tersine mühendisliğe, PLC programlama ve üretim hattı otomasyonundan makine tasarımına kadar tüm hizmetlerimiz ard arda aynı kalite anlayışıyla sunulur."
+            eyebrow={servicesPage.listSection.eyebrow}
+            title={servicesPage.listSection.title}
+            description={servicesPage.listSection.description}
           />
 
           <div className="mt-12 grid gap-6">
@@ -79,7 +90,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CtaSection />
+      <CtaSection company={company} {...cta} />
     </>
   );
 }

@@ -3,6 +3,11 @@ import { NextResponse } from "next/server";
 import { createProject, loadProjects } from "@/lib/content-store";
 import type { ProjectInput } from "@/lib/projects";
 
+function revalidateProjectPaths() {
+  revalidatePath("/");
+  revalidatePath("/projects");
+}
+
 export async function GET() {
   const projects = await loadProjects();
   return NextResponse.json({ projects });
@@ -13,8 +18,7 @@ export async function POST(request: Request) {
     const body = (await request.json()) as ProjectInput;
     const project = await createProject(body);
 
-    revalidatePath("/");
-    revalidatePath("/projects");
+    revalidateProjectPaths();
 
     return NextResponse.json({
       project,

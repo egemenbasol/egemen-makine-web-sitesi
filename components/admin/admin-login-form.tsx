@@ -31,7 +31,7 @@ export default function AdminLoginForm() {
       return;
     }
 
-    const nextPath = searchParams.get("next") ?? "/admin/projects";
+    const nextPath = searchParams.get("next") ?? "/admin/panel/company";
     router.push(nextPath);
     router.refresh();
   }

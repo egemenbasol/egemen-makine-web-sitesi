@@ -3,44 +3,48 @@ import { CtaSection } from "@/components/cta-section";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 import { loadPublishedProjects } from "@/lib/content-store";
-import { projectMetrics } from "@/lib/site-data";
-
-export const metadata: Metadata = {
-  title: "Projeler",
-  description:
-    "Egemen Makine CNC fason üretim, özel parça imalatı ve tersine mühendislik projelerinden örnekler.",
-  alternates: {
-    canonical: "/projects",
-  },
-};
+import { loadSiteContent } from "@/lib/site-content";
 
 export const dynamic = "force-dynamic";
 
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await loadSiteContent();
+
+  return {
+    title: "Projeler",
+    description: site.projectsPage.metaDescription,
+    alternates: {
+      canonical: "/projects",
+    },
+  };
+}
+
 export default async function ProjectsPage() {
-  const projects = await loadPublishedProjects();
+  const [site, projects] = await Promise.all([loadSiteContent(), loadPublishedProjects()]);
+  const { company, projectsPage, projectMetrics, cta } = site;
+
   return (
     <>
       <section className="industrial-bg py-24 text-white md:py-32">
         <div className="section-shell relative z-10 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">Projeler</p>
+            <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
+              {projectsPage.heroEyebrow}
+            </p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              CNC fason ve tersine mühendislik çalışmalarımız.
+              {projectsPage.heroTitle}
             </h1>
           </div>
-          <p className="text-lg leading-8 text-slate-300">
-            Fason parça üretiminden çizimsiz yedek parça kurtarmaya kadar gerçek atölye
-            deneyimimizi yansıtan örnekler.
-          </p>
+          <p className="text-lg leading-8 text-slate-300">{projectsPage.heroDescription}</p>
         </div>
       </section>
 
       <section className="py-20 md:py-28">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Vitrin"
-            title="Üretim odaklı proje örnekleri."
-            description="Tek parça, seri fason iş veya tersine mühendislik gerektiren işlerde aynı disiplinle çalışıyoruz."
+            eyebrow={projectsPage.listSection.eyebrow}
+            title={projectsPage.listSection.title}
+            description={projectsPage.listSection.description}
           />
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -54,9 +58,9 @@ export default async function ProjectsPage() {
       <section className="bg-slate-950 py-20 text-white md:py-28">
         <div className="section-shell">
           <SectionHeading
-            eyebrow="Çalışma modeli"
-            title="Ölçümden teslimata kadar net süreç."
-            description="Her proje ölçüm, üretim ve kalite kontrol adımlarıyla yönetilir."
+            eyebrow={projectsPage.metricsSection.eyebrow}
+            title={projectsPage.metricsSection.title}
+            description={projectsPage.metricsSection.description}
             tone="dark"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -70,7 +74,7 @@ export default async function ProjectsPage() {
         </div>
       </section>
 
-      <CtaSection />
+      <CtaSection company={company} {...cta} />
     </>
   );
 }

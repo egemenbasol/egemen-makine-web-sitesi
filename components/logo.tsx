@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { company } from "@/lib/site-data";
 
 type LogoProps = {
   href?: string;
   size?: number;
   showText?: boolean;
+  companyName?: string;
   subtitle?: string;
   className?: string;
   onClick?: () => void;
@@ -18,7 +18,8 @@ export function Logo({
   href = "/",
   size = 44,
   showText = true,
-  subtitle = company.tagline,
+  companyName = "Egemen Makine",
+  subtitle = "CNC Metal İşleme Ve Tersine Mühendislik",
   className = "",
   onClick,
 }: LogoProps) {
@@ -32,7 +33,7 @@ export function Logo({
       >
         <Image
           src={logoSrc}
-          alt={`${company.name} logo`}
+          alt={`${companyName} logo`}
           width={size - 6}
           height={size - 6}
           className="object-contain"
@@ -42,7 +43,7 @@ export function Logo({
       </span>
       {showText ? (
         <span>
-          <span className="block text-lg font-black tracking-tight">{company.name}</span>
+          <span className="block text-lg font-black tracking-tight">{companyName}</span>
           <span className="block text-xs uppercase tracking-[0.28em] text-slate-400">
             {subtitle}
           </span>
@@ -56,7 +57,7 @@ export function Logo({
   }
 
   return (
-    <Link href={href} aria-label={`${company.name} ana sayfa`} onClick={onClick}>
+    <Link href={href} aria-label={`${companyName} ana sayfa`} onClick={onClick}>
       {content}
     </Link>
   );

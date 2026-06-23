@@ -2,41 +2,44 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
 import { SectionHeading } from "@/components/section-heading";
-import { company, principles, processSteps, stats } from "@/lib/site-data";
+import { loadSiteContent } from "@/lib/site-content";
 
-export const metadata: Metadata = {
-  title: "Hakkımızda",
-  description:
-    "Egemen Makine; geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi, tersine mühendislik alanında Afyonkarahisar merkezli üretim atölyesi.",
-  alternates: {
-    canonical: "/about",
-  },
-};
+export const dynamic = "force-dynamic";
 
-export default function AboutPage() {
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await loadSiteContent();
+
+  return {
+    title: "Hakkımızda",
+    description: site.aboutPage.metaDescription,
+    alternates: {
+      canonical: "/about",
+    },
+  };
+}
+
+export default async function AboutPage() {
+  const site = await loadSiteContent();
+  const { company, aboutPage, principles, processSteps, stats, cta } = site;
+
   return (
     <>
       <section className="industrial-bg py-24 text-white md:py-32">
         <div className="section-shell relative z-10 grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.28em] text-sky-300">
-              Egemen Makine Hakkında
+              {aboutPage.heroEyebrow}
             </p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              Geniş takım parkurunda fason üretim ve tersine mühendislikte güvenilir atölye.
+              {aboutPage.heroTitle}
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-              {company.description}
-            </p>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{company.description}</p>
           </div>
           <div className="steel-panel rounded-[2.5rem] p-6">
             <div className="machine-card min-h-[360px] rounded-[2rem] p-7 text-white">
               <span className="gear-mark block size-20 rounded-full" />
-              <h2 className="mt-20 text-4xl font-black tracking-tight">Atölyeden üretime.</h2>
-              <p className="mt-4 leading-7 text-slate-300">
-                Geniş takım tezgahı parkurumuzda ihtiyaca özel ve fason parça üretimi ile çizimi
-                olmayan parçaların tersine mühendisliği günlük işimizin merkezinde yer alır.
-              </p>
+              <h2 className="mt-20 text-4xl font-black tracking-tight">{aboutPage.cardTitle}</h2>
+              <p className="mt-4 leading-7 text-slate-300">{aboutPage.cardDescription}</p>
             </div>
           </div>
         </div>
@@ -45,9 +48,9 @@ export default function AboutPage() {
       <section className="py-20 md:py-28">
         <div className="section-shell grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <SectionHeading
-            eyebrow="Şirket profili"
-            title="Üretim kabiliyeti ve mühendislik desteği bir arada."
-            description="Egemen Makine; çizimli fason işler, çizimsiz parça kurtarma ve gerektiğinde makine tasarımı projelerinde müşterilerine destek verir."
+            eyebrow={aboutPage.profileSection.eyebrow}
+            title={aboutPage.profileSection.title}
+            description={aboutPage.profileSection.description}
           />
           <div className="grid gap-5">
             {principles.map((principle) => (
@@ -75,9 +78,9 @@ export default function AboutPage() {
 
           <div className="mt-12 light-panel rounded-[2.25rem] p-6 md:p-10">
             <SectionHeading
-              eyebrow="Nasıl çalışıyoruz"
-              title="Tekliften teslimata şeffaf süreç."
-              description="Fason iş veya tersine mühendislik projelerinde adımlar net, iletişim açıktır."
+              eyebrow={aboutPage.processSection.eyebrow}
+              title={aboutPage.processSection.title}
+              description={aboutPage.processSection.description}
             />
             <div className="mt-10 grid gap-4 md:grid-cols-5">
               {processSteps.map((step, index) => (
@@ -97,22 +100,20 @@ export default function AboutPage() {
         <div className="section-shell flex flex-col gap-5 rounded-[2.25rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-950/5 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="text-3xl font-black tracking-tight text-slate-950">
-              Fason iş veya tersine mühendislik için teklif alın.
+              {aboutPage.ctaBox.title}
             </h2>
-            <p className="mt-3 text-slate-600">
-              Çizim, fotoğraf, numune veya kısa bir parça açıklaması göndermeniz yeterli.
-            </p>
+            <p className="mt-3 text-slate-600">{aboutPage.ctaBox.description}</p>
           </div>
           <Link
             href="/contact"
             className="rounded-full bg-slate-950 px-7 py-4 text-center text-sm font-black text-white transition hover:bg-slate-800"
           >
-            İletişime Geçin
+            {aboutPage.ctaBox.buttonLabel}
           </Link>
         </div>
       </section>
 
-      <CtaSection />
+      <CtaSection company={company} {...cta} />
     </>
   );
 }

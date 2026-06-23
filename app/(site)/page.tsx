@@ -3,18 +3,20 @@ import { CtaSection } from "@/components/cta-section";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 import { loadPublishedProjects } from "@/lib/content-store";
-import { company, processSteps, stats } from "@/lib/site-data";
+import { loadSiteContent } from "@/lib/site-content";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const projects = await loadPublishedProjects();
+  const [site, projects] = await Promise.all([loadSiteContent(), loadPublishedProjects()]);
+  const { company, home, stats, processSteps, cta } = site;
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: company.name,
     legalName: company.legalName,
-    url: "https://egemenmakine.com.tr",
+    url: site.seo.siteUrl,
     email: company.email,
     telephone: company.phone,
     address: company.address,
@@ -36,7 +38,7 @@ export default async function Home() {
               {company.tagline}
             </p>
             <h1 className="mt-6 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              Geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi.
+              {home.heroTitle}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
               {company.description}
@@ -46,13 +48,13 @@ export default async function Home() {
                 href="/contact"
                 className="rounded-full bg-sky-400 px-7 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-300"
               >
-                Teklif Alın
+                {home.heroPrimaryButton}
               </Link>
               <Link
                 href="/services"
                 className="rounded-full border border-white/15 bg-white/10 px-7 py-4 text-center text-sm font-black text-white transition hover:bg-white hover:text-slate-950"
               >
-                Hizmetleri İncele
+                {home.heroSecondaryButton}
               </Link>
             </div>
 
@@ -85,7 +87,7 @@ export default async function Home() {
                 <div className="relative z-10 flex h-full min-h-[466px] flex-col justify-between">
                   <div className="flex justify-between gap-4">
                     <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-sky-100">
-                      CNC Metal İşleme
+                      {home.visualBadge}
                     </span>
                     <span className="grid size-14 place-items-center rounded-2xl bg-white/10">
                       <span className="gear-mark size-10 rounded-full" />
@@ -93,10 +95,10 @@ export default async function Home() {
                   </div>
                   <div>
                     <p className="text-sm uppercase tracking-[0.26em] text-slate-300">
-                      Atölyeden sahaya
+                      {home.visualEyebrow}
                     </p>
                     <h2 className="mt-3 max-w-md text-4xl font-black tracking-tight text-white">
-                      Ölç. Modelle. İşle. Teslim Et.
+                      {home.visualTitle}
                     </h2>
                   </div>
                 </div>
@@ -110,15 +112,15 @@ export default async function Home() {
         <div className="section-shell">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
-              eyebrow="Üretim örnekleri"
-              title="Fason işleme ve tersine mühendislik projeleri."
-              description="CNC fason parça üretimi ve çizimsiz parça kurtarma çalışmalarından örnekler."
+              eyebrow={home.projectsSection.eyebrow}
+              title={home.projectsSection.title}
+              description={home.projectsSection.description}
             />
             <Link
               href="/projects"
               className="w-fit rounded-full bg-slate-950 px-6 py-3 text-sm font-black text-white transition hover:bg-slate-800"
             >
-              Tüm projeleri gör
+              {home.projectsSection.buttonLabel}
             </Link>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -132,9 +134,9 @@ export default async function Home() {
       <section className="py-20 md:py-28">
         <div className="section-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
-            eyebrow="Üretim süreci"
-            title="Tekliften teslimata net ve hızlı iş akışı."
-            description="Fason iş veya tersine mühendislik projelerinde her adım üretim odaklı ilerler."
+            eyebrow={home.processSection.eyebrow}
+            title={home.processSection.title}
+            description={home.processSection.description}
           />
           <div className="space-y-4">
             {processSteps.map((step, index) => (
@@ -152,7 +154,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <CtaSection />
+      <CtaSection company={company} {...cta} />
     </>
   );
 }

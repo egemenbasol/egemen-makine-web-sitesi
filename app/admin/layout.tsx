@@ -13,7 +13,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="min-h-screen bg-slate-100 text-slate-950">
       <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.24em] text-sky-600">
               Egemen Makine
@@ -28,7 +28,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </Link>
         </div>
       </header>
-      <main className="mx-auto max-w-6xl px-6 py-8">{children}</main>
+      <main className="mx-auto max-w-7xl px-6 py-8">{children}</main>
     </div>
   );
 }
