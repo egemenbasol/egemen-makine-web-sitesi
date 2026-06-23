@@ -47,5 +47,9 @@
   },
   "overrides": {
     "postcss": "^8.5.15"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-win32-x64-msvc": "4.3.1",
+    "lightningcss-win32-x64-msvc": "1.32.0"
   }
 }

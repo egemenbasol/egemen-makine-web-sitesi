@@ -20,12 +20,15 @@ if errorlevel 1 (
 
 echo Node.js bulundu.
 echo Paketler kontrol ediliyor...
-call npm install
+call npm.cmd install
 if errorlevel 1 (
   echo HATA: npm install basarisiz oldu.
   pause
   exit /b 1
 )
+
+echo Windows CSS paketleri kontrol ediliyor...
+call npm.cmd install lightningcss-win32-x64-msvc @tailwindcss/oxide-win32-x64-msvc --no-save
 
 echo.
 echo Site baslatiliyor...
