@@ -27,9 +27,6 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo Windows CSS paketleri kontrol ediliyor...
-call npm.cmd install lightningcss-win32-x64-msvc @tailwindcss/oxide-win32-x64-msvc --no-save
-
 echo.
 echo Site baslatiliyor...
 echo Tarayicida acin: http://localhost:3000
