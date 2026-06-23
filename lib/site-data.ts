@@ -3,7 +3,7 @@ export const company = {
   legalName: "Egemen Makine Sanayi ve Mühendislik",
   tagline: "CNC Metal İşleme Ve Tersine Mühendislik",
   description:
-    "Egemen Makine; CNC tezgahlarında metal işleme, fason ve özel parça üretimi ile tersine mühendislik hizmeti sunar. PLC programlama, otomasyon ve üretim hattı çözümleri de geliştirir. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
+    "Egemen Makine; geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi yapar, tersine mühendislik hizmeti sunar. PLC programlama, otomasyon ve üretim hattı çözümleri de geliştirir. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
   phone: "0532 505 92 56",
   phoneHref: "tel:+905325059256",
   email: "egemenbasol@egemenmakine.com.tr",
@@ -29,7 +29,7 @@ export const services = [
     title: "CNC fason ve özel parça üretimi",
     slug: "cnc-fason-uretim",
     summary:
-      "CNC tezgahlarımızda tek parçadan seri üretime kadar fason işleme ve özel parça imalatı.",
+      "Geniş takım tezgahı parkurumuzda tek parçadan seri üretime kadar ihtiyaca özel ve fason parça imalatı.",
     details:
       "Torna, freze ve işleme merkezlerimizde çelik, paslanmaz, alüminyum ve mühendislik plastiklerinde toleranslı üretim yapıyoruz. Prototip, yedek parça ve tekrarlayan fason işler için hızlı ve kontrollü teslimat sunuyoruz.",
     metrics: "Fason CNC işleme",
@@ -122,7 +122,7 @@ export const processSteps = [
   },
   {
     title: "CNC işleme",
-    detail: "Fason veya özel parça üretimi CNC tezgahlarda gerçekleştirilir.",
+    detail: "İhtiyaca özel ve fason parça üretimi geniş takım tezgahı parkurumuzda gerçekleştirilir.",
   },
   {
     title: "Kalite kontrol",
@@ -135,7 +135,7 @@ export const processSteps = [
 ];
 
 export const stats = [
-  { value: "CNC", label: "Metal işleme ve fason üretim" },
+  { value: "CNC", label: "İhtiyaca özel ve fason üretim" },
   { value: "3D", label: "Tersine mühendislik desteği" },
   { value: "Hızlı", label: "Teklif ve üretim süreci" },
 ];
@@ -147,21 +147,21 @@ export const serviceDeliverables = [
 ];
 
 export const servicePrinciples = [
-  "CNC tezgahlarda metal işleme ve fason üretim günlük işimizin merkezindedir.",
+  "Geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi günlük işimizin merkezindedir.",
   "Çizimi olmayan parçalarda tersine mühendislik ile hızlı ve doğru çözüm sunarız.",
-  "Tüm hizmetlerimiz; CNC metal işleme, tersine mühendislik ve üretim hattı otomasyonu dahil aynı kalite anlayışıyla yürütülür.",
+  "Tüm hizmetlerimiz; geniş takım parkurunda parça üretimi, tersine mühendislik ve üretim hattı otomasyonu dahil aynı kalite anlayışıyla yürütülür.",
 ];
 
 export const projectMetrics = [
   { value: "Ölç", label: "Parça inceleme, ölçüm ve tarama" },
-  { value: "Üret", label: "CNC metal işleme ve özel parça imalatı" },
+  { value: "Üret", label: "Geniş takım parkurunda özel ve fason parça imalatı" },
   { value: "Teslim", label: "Kalite kontrol ve zamanında teslimat" },
 ];
 
 export const principles = [
   {
     title: "Üretim odaklı çalışma",
-    text: "CNC tezgahlarda metal işleme ve özel parça üretimi günlük işimizin merkezindedir.",
+    text: "Geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi günlük işimizin merkezindedir.",
   },
   {
     title: "Tersine mühendislikte hız",

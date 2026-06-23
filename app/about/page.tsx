@@ -7,7 +7,7 @@ import { company, principles, processSteps, stats } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Egemen Makine; CNC fason işleme, özel parça üretimi ve tersine mühendislik alanında Afyonkarahisar merkezli üretim atölyesi.",
+    "Egemen Makine; geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi, tersine mühendislik alanında Afyonkarahisar merkezli üretim atölyesi.",
   alternates: {
     canonical: "/about",
   },
@@ -23,7 +23,7 @@ export default function AboutPage() {
               Egemen Makine Hakkında
             </p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
-              CNC fason üretim ve tersine mühendislikte güvenilir atölye.
+              Geniş takım parkurunda fason üretim ve tersine mühendislikte güvenilir atölye.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
               {company.description}
@@ -34,8 +34,8 @@ export default function AboutPage() {
               <span className="gear-mark block size-20 rounded-full" />
               <h2 className="mt-20 text-4xl font-black tracking-tight">Atölyeden üretime.</h2>
               <p className="mt-4 leading-7 text-slate-300">
-                CNC tezgahlarda fason işleme ve çizimi olmayan parçaların tersine mühendisliği
-                günlük işimizin merkezinde yer alır.
+                Geniş takım tezgahı parkurumuzda ihtiyaca özel ve fason parça üretimi ile çizimi
+                olmayan parçaların tersine mühendisliği günlük işimizin merkezinde yer alır.
               </p>
             </div>
           </div>
