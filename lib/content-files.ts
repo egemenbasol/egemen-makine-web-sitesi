@@ -1,6 +1,33 @@
+import projectsJson from "@/content/projects.json";
+import servicesJson from "@/content/services.json";
+import siteJson from "@/content/site.json";
+import { isGitHubConfigured, readGitHubFile, writeGitHubBinaryFile, writeGitHubFile } from "@/lib/github";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { isGitHubConfigured, readGitHubFile, writeGitHubBinaryFile, writeGitHubFile } from "@/lib/github";
+
+const bundledContentFiles: Record<string, string> = {
+  "content/site.json": `${JSON.stringify(siteJson, null, 2)}\n`,
+  "content/services.json": `${JSON.stringify(servicesJson, null, 2)}\n`,
+  "content/projects.json": `${JSON.stringify(projectsJson, null, 2)}\n`,
+};
+
+function getBundledContent(relativePath: string): string | null {
+  return bundledContentFiles[relativePath] ?? null;
+}
+
+async function readLocalContentFile(relativePath: string): Promise<string> {
+  try {
+    return await fs.readFile(path.join(process.cwd(), relativePath), "utf-8");
+  } catch {
+    const bundled = getBundledContent(relativePath);
+
+    if (bundled) {
+      return bundled;
+    }
+
+    throw new Error(`İçerik dosyası bulunamadı: ${relativePath}`);
+  }
+}
 
 export async function readContentFile(relativePath: string): Promise<string> {
   if (isGitHubConfigured()) {
@@ -11,7 +38,16 @@ export async function readContentFile(relativePath: string): Promise<string> {
     }
   }
 
-  return fs.readFile(path.join(process.cwd(), relativePath), "utf-8");
+  return readLocalContentFile(relativePath);
+}
+
+async function writeLocalContentFile(localPath: string, content: string | Buffer): Promise<void> {
+  try {
+    await fs.mkdir(path.dirname(localPath), { recursive: true });
+    await fs.writeFile(localPath, content);
+  } catch {
+    // Vercel gibi salt-okunur ortamlarda yerel yazma başarısız olabilir.
+  }
 }
 
 export async function writeContentFile(
@@ -24,10 +60,11 @@ export async function writeContentFile(
 
   if (isGitHubConfigured()) {
     await writeGitHubFile(relativePath, normalized, message);
+    await writeLocalContentFile(localPath, normalized);
+    return;
   }
 
-  await fs.mkdir(path.dirname(localPath), { recursive: true });
-  await fs.writeFile(localPath, normalized, "utf-8");
+  await writeLocalContentFile(localPath, normalized);
 }
 
 export async function writeContentBinaryFile(
@@ -39,10 +76,11 @@ export async function writeContentBinaryFile(
 
   if (isGitHubConfigured()) {
     await writeGitHubBinaryFile(relativePath, buffer, message);
+    await writeLocalContentFile(localPath, buffer);
+    return;
   }
 
-  await fs.mkdir(path.dirname(localPath), { recursive: true });
-  await fs.writeFile(localPath, buffer);
+  await writeLocalContentFile(localPath, buffer);
 }
 
 export async function readJsonFile<T>(relativePath: string): Promise<T> {
