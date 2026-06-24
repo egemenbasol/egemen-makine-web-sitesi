@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cnc-fason-uretim",
+    "title": "CNC fason ve özel parça üretimi",
+    "slug": "cnc-fason-uretim",
+    "summary": "Geniş takım tezgahı parkurumuzda tek parçadan seri üretime kadar ihtiyaca özel ve fason parça imalatı.",
+    "details": "Torna, freze ve işleme merkezlerimizde çelik, paslanmaz, alüminyum ve mühendislik plastiklerinde toleranslı üretim yapıyoruz. Prototip, yedek parça ve tekrarlayan fason işler için hızlı ve kontrollü teslimat sunuyoruz.",
+    "metrics": "Fason CNC işleme",
+    "published": true,
+    "order": 1
+  },
+  {
+    "id": "tersine-muhendislik",
+    "title": "Tersine mühendislik",
+    "slug": "tersine-muhendislik",
+    "summary": "Çizimi olmayan, eski veya aşınmış parçaların ölçülerek yeniden üretilebilir hale getirilmesi.",
+    "details": "Parçayı ölçüyor, gerekirse 3D tarıyor ve üretime uygun CAD modeli oluşturuyoruz. Dokümantasyonu kaybolmuş kritik bileşenler için hızlı ve güvenilir çözüm sağlıyoruz.",
+    "metrics": "Ölçüm ve modelleme",
+    "published": true,
+    "order": 2
+  },
+  {
+    "id": "3d-tarama",
+    "title": "3D tarama",
+    "slug": "3d-tarama",
+    "summary": "Parça geometrisinin dijital ortama aktarılması, ölçüm ve tersine mühendislik için veri üretimi.",
+    "details": "Tarama verisini CAD ortamına taşıyarak ölçüm, karşılaştırma ve yeniden üretim sürecini hızlandırıyoruz. Karmaşık yüzeyli parçalarda manuel ölçüme göre daha hızlı sonuç alınır.",
+    "metrics": "Taramadan modele",
+    "published": true,
+    "order": 3
+  },
+  {
+    "id": "cad-cam-muhendisligi",
+    "title": "CAD/CAM mühendisliği",
+    "slug": "cad-cam-muhendisligi",
+    "summary": "İşleme programı, takım yolu ve üretim verisi hazırlığı.",
+    "details": "Teknik çizim veya tersine mühendislik çıktısından CNC programına kadar üretime hazır veri oluşturuyoruz. Tolerans, takım seçimi ve işleme stratejisi üretim kalitesini doğrudan etkiler.",
+    "metrics": "Üretime hazır program",
+    "published": true,
+    "order": 4
+  },
+  {
+    "id": "ozel-makine-tasarimi",
+    "title": "Özel makine tasarımı",
+    "slug": "ozel-makine-tasarimi",
+    "summary": "İhtiyaca özel mekanik çözümler ve makine konseptleri.",
+    "details": "Üretim süreçlerine uygun özel makine, fikstür ve mekanik çözümler tasarlıyoruz. İhtiyaca göre konseptten imalata kadar destek sağlıyoruz.",
+    "metrics": "Proje bazlı tasarım",
+    "published": true,
+    "order": 5
+  },
+  {
+    "id": "endustriyel-otomasyon",
+    "title": "PLC programlama ve otomasyon",
+    "slug": "endustriyel-otomasyon",
+    "summary": "PLC programlama, otomasyon ve üretim hattı çözümleri.",
+    "details": "Üretim hatları için PLC programlama, sensör-aktüatör entegrasyonu, kontrol panosu ve otomasyon mantığı geliştiriyoruz. Hat verimliliğini artıran, güvenli ve sürdürülebilir otomasyon sistemlerinin kurulumu ve devreye alınmasında destek sağlıyoruz.",
+    "metrics": "Üretim hattı otomasyonu",
+    "published": true,
+    "order": 6
+  }
+]

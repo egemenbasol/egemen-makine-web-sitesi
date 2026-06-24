@@ -1,0 +1,177 @@
+{
+  "company": {
+    "name": "Egemen Makine",
+    "legalName": "Egemen Makine Sanayi ve Mühendislik",
+    "tagline": "CNC Metal İşleme Ve Tersine Mühendislik",
+    "description": "Egemen Makine; geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi yapar, tersine mühendislik hizmeti sunar. PLC programlama, otomasyon ve üretim hattı çözümleri de geliştirir. Çizimi olan veya olmayan parçalar için ölçüm, CAD/CAM hazırlığı, hassas işleme ve kalite kontrollü teslimat sağlar.",
+    "phone": "0532 505 92 56",
+    "email": "egemenbasol@egemenmakine.com.tr",
+    "address": "Veysel Karani, 1144. Sk. 58/A, 03000 Afyonkarahisar Merkez/Afyonkarahisar",
+    "whatsappMessage": "Merhaba Egemen Makine, CNC metal işleme veya tersine mühendislik hakkında bilgi almak istiyorum.",
+    "mapLink": "https://share.google/OXMt8SIRqn6ZnmcBJ",
+    "mapEmbed": "https://www.google.com/maps?q=Veysel+Karani%2C+1144.+Sk.+58%2FA%2C+03000+Afyonkarahisar+Merkez%2FAfyonkarahisar&output=embed"
+  },
+  "seo": {
+    "siteUrl": "https://egemenmakine.com.tr",
+    "titleSuffix": "CNC Metal İşleme Ve Tersine Mühendislik",
+    "keywords": [
+      "Egemen Makine",
+      "CNC metal işleme",
+      "CNC fason",
+      "özel parça üretimi",
+      "tersine mühendislik",
+      "3D tarama",
+      "CAD CAM",
+      "CNC işleme",
+      "Afyonkarahisar"
+    ]
+  },
+  "home": {
+    "heroTitle": "Geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi.",
+    "heroPrimaryButton": "Teklif Alın",
+    "heroSecondaryButton": "Hizmetleri İncele",
+    "visualBadge": "CNC Metal İşleme",
+    "visualEyebrow": "Atölyeden sahaya",
+    "visualTitle": "Ölç. Modelle. İşle. Teslim Et.",
+    "projectsSection": {
+      "eyebrow": "Üretim örnekleri",
+      "title": "Fason işleme ve tersine mühendislik projeleri.",
+      "description": "CNC fason parça üretimi ve çizimsiz parça kurtarma çalışmalarından örnekler.",
+      "buttonLabel": "Tüm projeleri gör"
+    },
+    "processSection": {
+      "eyebrow": "Üretim süreci",
+      "title": "Tekliften teslimata net ve hızlı iş akışı.",
+      "description": "Fason iş veya tersine mühendislik projelerinde her adım üretim odaklı ilerler."
+    }
+  },
+  "servicesPage": {
+    "metaDescription": "Egemen Makine CNC metal işleme, fason üretim, tersine mühendislik, PLC programlama, otomasyon, üretim hattı, 3D tarama ve CAD/CAM hizmetleri.",
+    "heroEyebrow": "Hizmetler",
+    "heroTitle": "CNC metal işleme, otomasyon ve mühendislik hizmetlerimiz.",
+    "listSection": {
+      "eyebrow": "Hizmetlerimiz",
+      "title": "Altı hizmet, tek üretim disiplini.",
+      "description": "CNC metal işlemeden tersine mühendisliğe, PLC programlama ve üretim hattı otomasyonundan makine tasarımına kadar tüm hizmetlerimiz ard arda aynı kalite anlayışıyla sunulur."
+    }
+  },
+  "projectsPage": {
+    "metaDescription": "Egemen Makine CNC fason üretim, özel parça imalatı ve tersine mühendislik projelerinden örnekler.",
+    "heroEyebrow": "Projeler",
+    "heroTitle": "CNC fason ve tersine mühendislik çalışmalarımız.",
+    "heroDescription": "Fason parça üretiminden çizimsiz yedek parça kurtarmaya kadar gerçek atölye deneyimimizi yansıtan örnekler.",
+    "listSection": {
+      "eyebrow": "Vitrin",
+      "title": "Üretim odaklı proje örnekleri.",
+      "description": "Tek parça, seri fason iş veya tersine mühendislik gerektiren işlerde aynı disiplinle çalışıyoruz."
+    },
+    "metricsSection": {
+      "eyebrow": "Çalışma modeli",
+      "title": "Ölçümden teslimata kadar net süreç.",
+      "description": "Her proje ölçüm, üretim ve kalite kontrol adımlarıyla yönetilir."
+    }
+  },
+  "aboutPage": {
+    "metaDescription": "Egemen Makine; geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi, tersine mühendislik alanında Afyonkarahisar merkezli üretim atölyesi.",
+    "heroEyebrow": "Egemen Makine Hakkında",
+    "heroTitle": "Geniş takım parkurunda fason üretim ve tersine mühendislikte güvenilir atölye.",
+    "cardTitle": "Atölyeden üretime.",
+    "cardDescription": "Geniş takım tezgahı parkurumuzda ihtiyaca özel ve fason parça üretimi ile çizimi olmayan parçaların tersine mühendisliği günlük işimizin merkezinde yer alır.",
+    "profileSection": {
+      "eyebrow": "Şirket profili",
+      "title": "Üretim kabiliyeti ve mühendislik desteği bir arada.",
+      "description": "Egemen Makine; çizimli fason işler, çizimsiz parça kurtarma ve gerektiğinde makine tasarımı projelerinde müşterilerine destek verir."
+    },
+    "processSection": {
+      "eyebrow": "Nasıl çalışıyoruz",
+      "title": "Tekliften teslimata şeffaf süreç.",
+      "description": "Fason iş veya tersine mühendislik projelerinde adımlar net, iletişim açıktır."
+    },
+    "ctaBox": {
+      "title": "Fason iş veya tersine mühendislik için teklif alın.",
+      "description": "Çizim, fotoğraf, numune veya kısa bir parça açıklaması göndermeniz yeterli.",
+      "buttonLabel": "İletişime Geçin"
+    }
+  },
+  "contactPage": {
+    "metaDescription": "CNC fason işleme, özel parça üretimi ve tersine mühendislik için Egemen Makine ile iletişime geçin.",
+    "heroEyebrow": "İletişim",
+    "heroTitle": "CNC fason veya tersine mühendislik için bize ulaşın.",
+    "heroDescription": "Çiziminizi, parça fotoğrafınızı veya numunenizi paylaşın; fason işleme veya tersine mühendislik için hızlı geri dönüş sağlayalım.",
+    "mapSection": {
+      "eyebrow": "Konum",
+      "title": "Egemen Makine ile ziyaret veya koordinasyon sağlayın.",
+      "description": "Atölye ziyareti veya numune teslimi için önceden iletişime geçmenizi öneririz."
+    },
+    "servicesListTitle": "Sık talep edilen hizmetler"
+  },
+  "cta": {
+    "eyebrow": "Hemen teklif alın",
+    "title": "CNC fason işleme veya tersine mühendislik için parçanızı gönderin.",
+    "description": "Çizimli fason işler ve çizimsiz parça kurtarma taleplerinde hızlı değerlendirme ve net üretim planı sunuyoruz.",
+    "primaryButton": "Teklif Alın",
+    "secondaryButton": "WhatsApp ile Yazın"
+  },
+  "processSteps": [
+    {
+      "title": "Teknik inceleme ve ölçüm",
+      "detail": "Parça, çizim veya numune üzerinden tolerans, malzeme ve adet bilgisi netleştirilir."
+    },
+    {
+      "title": "CAD/CAM veya tersine mühendislik",
+      "detail": "Çizim varsa işleme programı hazırlanır; yoksa ölçüm ve tarama ile model oluşturulur."
+    },
+    {
+      "title": "CNC işleme",
+      "detail": "İhtiyaca özel ve fason parça üretimi geniş takım tezgahı parkurumuzda gerçekleştirilir."
+    },
+    {
+      "title": "Kalite kontrol",
+      "detail": "Kritik ölçüler kontrol edilir, yüzey ve tolerans doğrulaması yapılır."
+    },
+    {
+      "title": "Teslimat ve tekrar üretim",
+      "detail": "Onaylanan parçalar teslim edilir; seri fason işlerde süreklilik sağlanır."
+    }
+  ],
+  "stats": [
+    { "value": "CNC", "label": "İhtiyaca özel ve fason üretim" },
+    { "value": "3D", "label": "Tersine mühendislik desteği" },
+    { "value": "Hızlı", "label": "Teklif ve üretim süreci" }
+  ],
+  "principles": [
+    {
+      "title": "Üretim odaklı çalışma",
+      "text": "Geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi günlük işimizin merkezindedir."
+    },
+    {
+      "title": "Tersine mühendislikte hız",
+      "text": "Çizimi kaybolmuş veya eskimiş parçaları ölçerek kısa sürede yeniden üretilebilir hale getiririz."
+    },
+    {
+      "title": "Net süreç",
+      "text": "Teklif, üretim ve teslimat adımları şeffaf ilerler; müşteri her aşamada ne bekleyeceğini bilir."
+    }
+  ],
+  "serviceDeliverables": [
+    "Teknik değerlendirme",
+    "İşleme / model verisi",
+    "Kalite kontrol"
+  ],
+  "servicePrinciples": [
+    "Geniş takım tezgahı parkuru ile ihtiyaca özel ve fason parça üretimi günlük işimizin merkezindedir.",
+    "Çizimi olmayan parçalarda tersine mühendislik ile hızlı ve doğru çözüm sunarız.",
+    "Tüm hizmetlerimiz; geniş takım parkurunda parça üretimi, tersine mühendislik ve üretim hattı otomasyonu dahil aynı kalite anlayışıyla yürütülür."
+  ],
+  "projectMetrics": [
+    { "value": "Ölç", "label": "Parça inceleme, ölçüm ve tarama" },
+    { "value": "Üret", "label": "Geniş takım parkurunda özel ve fason parça imalatı" },
+    { "value": "Teslim", "label": "Kalite kontrol ve zamanında teslimat" }
+  ],
+  "contactTips": [
+    "Varsa teknik çizim veya CAD dosyası",
+    "Parça fotoğrafı, ölçü veya numune bilgisi",
+    "Malzeme, tolerans, adet ve teslim süresi",
+    "Çizimsiz parçalar için tersine mühendislik ihtiyacı"
+  ]
+}
